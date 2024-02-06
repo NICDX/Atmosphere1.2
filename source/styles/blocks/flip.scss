@@ -10,7 +10,7 @@
   @media ($mediaTablet) {
     gap: 30px;
     display: grid;
-    grid-template-rows: repeat(5, 1238px);
+    grid-template-rows: repeat(2, 1238px);
     grid-template-columns: repeat(2, 562px);
     margin: 0 auto;
     width: min-content;
@@ -25,20 +25,28 @@
 
 
 .flip__title {
-
+  @media ($mediaTablet) {
+    font-size: 24px;
+  }
 }
 
-.flip__picture {
-
+.flip__picrureimg {
+  @media ($mediaTablet) {
+    align-items: center;
+  }
 }
 
 
 .flip__discription {
-
+  @media ($mediaTablet) {
+    font-size: 24px;
+  }
 }
 
 .flip__titlesec {
-
+  @media ($mediaTablet) {
+    font-size: 24px;
+  }
 }
 
 .flip__listsec {
@@ -51,7 +59,9 @@
 
 
 .flip__listsecitemdisc {
-
+  @media ($mediaTablet) {
+    font-size: 24px;
+  }
 }
 
 
