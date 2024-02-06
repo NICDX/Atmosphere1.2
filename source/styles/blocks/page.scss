@@ -1,0 +1,40 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: $colorBasePrimary;
+  padding-top: 60px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  height: 100%;
+  flex-direction: column;
+  margin: 0;
+  min-width: 320px;
+  //align-items: center;
+
+  @media ($mediaTablet) {
+    padding-top: 80px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.page__content {
+  flex: 1;
+}
+
+.page__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0;
+
+  @media ($mediaTablet) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}

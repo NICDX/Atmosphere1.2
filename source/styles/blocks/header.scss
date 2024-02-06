@@ -1,0 +1,49 @@
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+}
+
+.header__container {
+  background-color: $colorBaseSecondary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  //margin-left: 20px;
+  position: relative;
+  margin-left: -8px;
+  margin-top: -80px;
+
+  @media ($mediaTablet) {
+    padding-right: $containerIndent;
+  }
+
+  @media ($mediaDesktop) {
+    padding-right: $containerIndentDesktop;
+    gap: 140px;
+    margin-left: -8px;
+    justify-content: center;
+    margin-top: -80px;
+  }
+}
+
+.header__logo {
+  @include link-reset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media ($mediaTablet) {
+    margin-left: 150px;
+    margin-right: 88px;
+  }
+}
+
+.personal__header {
+  margin-left: auto;
+
+  @media ($mediaTablet) {
+    margin-left: initial;
+  }
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Бюро Атмосфера></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/index.js" defer></script>
+  </head>
+<body class ="page__body">
+
+
+  <header class="header">
+    <div class="header__container">
+     <a class="header__logo" href="index.html">
+      <picture>
+        <source type="image/svg+xml" media="(min-width: 1920px)" srcset="./images/logo-desktop.svg">
+        <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/logo-desktop.svg">
+        <img src="./images/logo-mobile.svg" width="63" height="44"
+             alt="Логотип Бюро Атмосфера.">
+      </picture>
+     </a>
+
+     <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="services.html">
+            Услуги бюро
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="projects.html">
+            Флиппинг проекты
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="clients.html">
+            Частным клиентам
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="investors.html">
+            Ивесторам
+          </a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="personal__header personal-nav">
+      <ul class="personal-nav__list">
+        <li class="personal-nav__item">
+          <a class="personal-nav__button" href="#" title="Наш Whatsapp">
+            <svg width="24" height="24">
+              <use href="./images/icons/stack.svg#whatsapp"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="personal-nav__item">
+          <a class="personal-nav__button" href="#" title="Наш Telegramm">
+            <svg width="24" height="24">
+              <use href="./images/icons/stack.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="personal-nav__item">
+          <a class="personal-nav__button" href="#" title="Заказать звонок">  <!--При нажатии ссылки открывается модальное окно-->
+            <svg width="24" height="24">
+              <use href="./images/icons/stack.svg#phone"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="menu">
+    <span class="menu__link-span">
+      <svg class="menu__burger js-toggle-button" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Atmosphere" >
+          <use xlink:href="#menu__burger">
+          </use>
+      </svg>
+    </span>
+   <svg class="menu__cross" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"" role="img" aria-label="Atmosphere" >
+     <use xlink:href="#menu__cross">
+     </use>
+   </svg>
+  </div>
+  </div>
+
+    <nav class="menu-mobile">
+      <ul class="menu-mobile__list">
+        <li class="menu-mobile__item">
+          <a class="menu-mobile__link" href="services.html">
+            Услуги бюро
+          </a>
+        </li>
+        <li class="menu-mobile__item">
+          <a class="menu-mobile__link" href="projects.html">
+            Флиппинг проекты
+          </a>
+        </li>
+        <li class="menu-mobile__item">
+          <a class="menu-mobile__link" href="clients.html">
+            Частным клиентам
+          </a>
+        </li>
+        <li class="menu-mobile__item">
+          <a class="menu-mobile__link" href="investors.html">
+            Ивесторам
+          </a>
+        </li>
+        <li class="menu-mobile__item">
+          <a class="menu-mobile__link" href="#">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<!---Header-->
+<!---Main-->
+<main class="page__main">
+    <!--link list-->
+
+<section class="services">
+<div class="services__text">
+    <h3 class="services__title">Услуги бюро</h3>
+</div>
+</section>
+
+<section class="flip">
+
+<ul class="flip__list">
+  <li class="flip__item">
+      <h3 class="flip__title">Инвестиционные флип проекты </h3>
+      <a class="flip__picture" href="#">
+        <picture>
+          <source type="img" media="(min-width: 1920px)"
+                  srcset="./images/change.jpg">
+                <source type="img" media="(min-width: 768px)"
+                  srcset="./images/change-mobile.jpg">
+                <source type="img" srcset="./images/change-mobile.jpg">
+                <source media="(min-width: 1920px)"
+                  srcset="./images/change.jpg">
+                <source media="(min-width: 768px)"
+                  srcset="./images/change-mobile.jpg">
+                <img class="flip__picrureimg" src="./images/change-mobile.jpg" srcset="./images/change-mobile.jpg"
+                  width="328" height="144" alt="квартира.">
+        </picture>
+
+      </a>
+      <p class="flip__discription"> Если вы решили инвестировать в недвижимость в Москве — это отличное решение. А инвестиционное бюро «Атмосфера» всегда готово взять на себя все заботы по развитию инвестиционных флиппинг-проектов, что позволит вам получать доход от вложений на уровне выше рынка и освободить время для развития других направлений вашего бизнеса.</p>
+      <h3 class="flip__titlesec">
+        Команда бюро «Атмосфера» предлагает:
+      </h3>
+      <ol class="flip__listsec">
+        <li class="flip__listsecitem">
+          <p class="flip__listsecitemdisc"> Поиск объекта для инвестиций в Москве</p>
+        </li>
+        <li class="flip__listsecitem">
+          <p class="flip__listsecitemdisc"> Дизайнерский ремонт квартиры</p>
+        </li>
+        <li class="flip__listsecitem">
+          <p class="flip__listsecitemdisc"> Юридическое сопровождение полного цикла и любого уровня сложности</p>
+        </li>
+        <li class="flip__listsecitem">
+          <p class="flip__listsecitemdisc"> Рекламную и маркетинговую поддержку в продаже недвижимости в топовых ресурсах.</p>
+        </li>
+        <li class="flip__listsecitem">
+          <p class="flip__listsecitemdisc"> Создание стратегии.</p>
+        </li>
+        <li class="flip__listsecitem">
+          <p class="flip__listsecitemdisc"> Предпродажная подготовка, хоум-стейджинг.</p>
+        </li>
+        <li class="flip__listsecitem">
+          <p class="flip__listsecitemdisc"> Мы сопровождаем ваши флиппинг-проекты от А до Я.</p>
+        </li>
+      </ol>
+      </li>
+
+      <li class="flip__item">
+        <h3 class="flip__title">Предпродажная подготовка квартир</h3>
+        <a class="flip__picture" href="#">
+          <picture>
+            <source type="img" media="(min-width: 1920px)"
+                    srcset="./images/roominterier.jpg">
+                  <source type="img" media="(min-width: 768px)"
+                    srcset="./images/roominterier-mobile.jpg">
+                  <source type="img" srcset="./images/roominterier-mobile.jpg">
+                  <source media="(min-width: 1920px)"
+                    srcset="./images/roominterier.jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/roominterier-mobile.jpg.jpg">
+                  <img class="flip__picrureimg" src="./images/roominterier-mobile.jpg" srcset="./images/roominterier-mobile.jpg"
+                    width="328" height="144" alt="квартира.">
+          </picture>
+
+        </a>
+        <p class="flip__discription">Профессионалы инвестиционного бюро «Атмосфера» быстро и качественно проведут полную подготовку квартиры к продаже или аренде.
+        </p>
+        <ol class="flip__listsec">
+          <li class="flip__listsecitem">
+            <p class="flip__listsecitemdisc"> Дизайнерский ремонт</p>
+          </li>
+          <li class="flip__listsecitem">
+            <p class="flip__listsecitemdisc"> Комплектация мебелью и аксессуарами</p>
+          </li>
+        </ol>
+        <p class="flip__discription">Над вашим объектом будут работать профессионалы, которые помогут выделиться среди других предложений на рынке. Это позволит продать/сдать в аренду недвижимость в Москве оперативно и по цене выше рыночной.</p>
+        <p class="flip__discription"> Мы создаем уютное и функциональное пространство, с оптимальным бюджетом и сроками, без ущерба качеству работ.</p>
+        <p class="flip__discription"> Свяжитесь с нами, и мы с удовольствием ответим на все ваши вопросы.</p>
+      </li>
+
+
+      <li class="flip__item">
+        <h3 class="flip__title">Создание стратегии и управление </h3>
+        <a class="flip__picture" href="#">
+
+          <picture>
+            <source type="img" media="(min-width: 1920px)"
+                    srcset="./images/citysecr.jpg">
+                  <source type="img" media="(min-width: 768px)"
+                    srcset="./images/citysec-mobile.jpg">
+                  <source type="img" srcset="./images/citysec-mobile.jpg">
+                  <source media="(min-width: 1920px)"
+                    srcset="./images/citysec.jpg">
+                  <source media="(min-width: 768px)"
+                    srcset="./images/citysec-mobile.jpg.jpg">
+                  <img class="flip__picrureimg" src="./images/citysec-mobile.jpg" srcset="./images/citysec-mobile.jpg"
+                    width="328" height="144" alt="квартира.">
+          </picture>
+
+        </a>
+        <p class="flip__discription">Ориентироваться на рынке недвижимости непросто. Нужно постоянно быть в курсе тенденций, отслеживать изменения и колебания рынка.
+        <p class="flip__discription">Специалисты инвестиционного бюро «Атмосфера» обладают обширным опытом в капитализации недвижимости в Москве и всегда знают все тонкости ситуации на рынке на сегодняшний день.</p>
+        <p class="flip__discription">  С самого начала нашего сотрудничества мы изучим и проанализируем текущую рыночную обстановку, выберем стратегию и сбалансируем портфель с минимальными рисками и вариантами выхода из возможного кризиса.</p>
+        <p class="flip__discription">Гибкость мышления, опыт в наращивании капиталов и свежий взгляд на развитие инвестиционных возможностей в недвижимости поможет нам вместе обезопасить ваш капитал даже с учетом постоянных колебаний национальной и мировой экономики.</p>
+        <p class="flip__discription">Свяжитесь с нами, и мы с удовольствием ответим на все ваши вопросы.</p>
+      </li>
+
+      <li class="flip__item">
+        <h3 class="flip__title">Персональный подбор недвижимости </h3>
+        <a class="flip__picture" href="#">
+          <picture>
+            <source type="img" media="(min-width: 1920px)"
+            srcset="./images/hands.jpg">
+          <source type="img" media="(min-width: 768px)"
+            srcset="./images/hands-mobile.jpg">
+          <source type="img" srcset="./images/hands-mobile.jpg">
+          <source media="(min-width: 1920px)"
+            srcset="./images/hands.jpg">
+          <source media="(min-width: 768px)"
+            srcset="./images/hands-mobile.jpg.jpg">
+          <img class="flip__picrureimg" src="./images/hands-mobile.jpg" srcset="./images/hands-mobile.jpg"
+            width="328" height="144" alt="квартира.">
+          </picture>
+
+        </a>
+        <p class="flip__discription">Найти и купить квартиру в Москве — задача не из легких.
+        <p class="flip__discription">Специалисты инвестиционного бюро «Атмосфера» помогут подобрать объект недвижимости с учетом всех ваших пожеланий. Мы отлично знаем районы Москвы и их особенности, типы и разновидности домов, различные факторы, которые важны для проживания. </p>
+        <p class="flip__discription"> Поможем получить одобрение на специальных условиях от ведущих банков и страховых компаний. Окажем помощь с юридическим оформлением сделки, чтобы вы с уверенностью покупали только проверенное жилье.</p>
+        <p class="flip__discription">Гибкость мышления, опыт в наращивании капиталов и свежий взгляд на развитие инвестиционных возможностей в недвижимости поможет нам вместе обезопасить ваш капитал даже с учетом постоянных колебаний национальной и мировой экономики.</p>
+        <p class="flip__discription">Свяжитесь с нами, и мы с удовольствием ответим на все ваши вопросы.</p>
+      </li>
+
+      <li class="flip__item">
+        <h3 class="flip__title">Оценка недвижимости </h3>
+        <a class="flip__picture" href="#">
+          <picture>
+            <source type="img" media="(min-width: 1920px)"
+            srcset="./images/working.jpg">
+          <source type="img" media="(min-width: 768px)"
+            srcset="./images/working-mobile.jpg">
+          <source type="img" srcset="./images/working-mobile.jpg">
+          <source media="(min-width: 1920px)"
+            srcset="./images/working.jpg">
+          <source media="(min-width: 768px)"
+            srcset="./images/working-mobile.jpg.jpg">
+          <img class="flip__picrureimg" src="./images/working-mobile.jpg" srcset="./images/working-mobile.jpg"
+            width="328" height="144" alt="квартира.">
+          </picture>
+
+        </a>
+        <p class="flip__discription">Планируете продать квартиру в Москве или Московской области, но боитесь стать жертвой недобросовестных агентов или скрытых комиссий?
+        <p class="flip__discription">Специалисты инвестиционного бюро «Атмосфера» помогут подобрать объект недвижимости с учетом всех ваших пожеланий. Мы отлично знаем районы Москвы и их особенности, типы и разновидности домов, различные факторы, которые важны для проживания.
+        <ol class="flip__listsec">
+          <li class="flip__listsecitem">
+            <p class="flip__listsecitemdisc"> У нас есть большой экспертный опыт в проведении сделок полного цикла:</p>
+          </li>
+          <li class="flip__listsecitem">
+            <p class="flip__listsecitemdisc"> юридических проверок;</p>
+          </li>
+          <li class="flip__listsecitem">
+            <p class="flip__listsecitemdisc"> сопровождения на всех этапах продажи;</p>
+          </li>
+          <li class="flip__listsecitem">
+            <p class="flip__listsecitemdisc"> подбора оптимальной формы оплаты;</p>
+          </li>
+          <li class="flip__listsecitem">
+            <p class="flip__listsecitemdisc"> альтернативной покупки или обмена недвижимости.</p>
+          </li>
+        </ol>
+        <p class="flip__discription">Свяжитесь с нами, и мы с удовольствием ответим на все ваши вопрос</p>
+      </li>
+</ul>
+</section>
+
+<section class="flip__buttons">
+  <button class="flip__button" type="button">Заказать услуги как инвестор</button>
+  <button class="flip__button" type="button">Заказать услуги как частный клиент</button>
+</section>
+
+
+  </main>
+<!---Main-->
+ <!---Footer-->
+
+ <footer class="footer">
+  <div class="footer__container">
+    <div class="footer__innner">
+      <div class="footer__logo">
+        <picture>
+          <source type="image/svg+xml" media="(min-width: 1920px)" srcset="./images/atmlogofooter-desktop.svg">
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/atmlogofooter-desktop.svg">
+          <img src="./images/atmlogofooter-mobile.svg" width="115" height="80"
+               alt="Логотип Бюро Атмосфера.">
+        </picture>
+      </div>
+
+      <div class="footer__logo">
+        <picture>
+          <source type="image/svg+xml" media="(min-width: 1920px)" srcset="./images/Atmosphere-desktop.svg">
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/Atmosphere-desktop.svg">
+          <img src="./images/Atmosphere-mobile.svg" width="328" height="26"
+               alt="Логотип Бюро Атмосфера.">
+        </picture>
+      </div>
+
+      <p class="footer__logo-text">Недвижимость. Дизайн. Инвестиции.</p>
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a class="social__link" href="#" title="Whatsapp">
+            <span class="visually-hidden">Whatsapp.</span>
+            <svg width="24" height="24">
+              <use href="./images/icons/stack.svg#whatsapp"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" title="Telegramm">
+            <span class="visually-hidden">Telegramm.</span>
+            <svg width="24" height="24">
+              <use href="./images/icons/stack.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+            <span class="social__telephone">8080800808080.</span>
+        </li>
+      </ul>
+    </div>
+
+   <div class="footer__fiealdset">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <form class="reg-form" action="#" method="post">   <!--в значении параметра action должна быть ссылка на сайт, на который передается инфа-->
+      <div class="reg-form__container">
+        <fieldset class="reg-form__registration reg-form__name">
+          <legend class="reg-form__title  reg-form__represent">Хотите заказать звонок?:</legend>
+          <p class="reg-form__label-container">
+            <input class="reg-form__input input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+          </p>
+          <p class="reg-form__label-container">
+            <input class="reg-form__input input" type="text" id="telephonenumber" name="telephonenumber" placeholder="Ваш номер"
+              required>
+          </p>
+          <p class="reg-form__label-container">
+            <button class="reg-form__button " type="submit">Заказать звонок</button>
+          </p>
+        </fieldset>
+    </div>
+    </div>
+
+
+  <div class="footer__information">
+  <ul class="footer__inf information">
+    <li class="information__item">
+      <a class="information__link" href="#" title="Instagramm">
+        <span class="visually-hidden">Instagramm.</span>
+        <svg width="20" height="20">
+          <!--Instagramm pic-->
+        </svg>
+      @Insta
+      </a>
+    </li>
+    <li class="information__item">
+      <a class="information__link" href="#" title="email">
+        <span class="visually-hidden">email.</span>
+        <svg width="20" height="20">
+          <!--email pic-->
+        </svg>
+      @email
+      </a>
+    </li>
+    <li class="information__item">
+    <a class="information__link" href="#" title="addres">
+      <span class="visually-hidden">Instagramm.</span>
+      <svg width="20" height="20">
+        <!--adress pic-->
+      </svg>
+    @addres
+    </a>
+    </li>
+  </ul>
+ </div>
+
+ <div class="footer__rightsinformation">
+    <ul class="footer__rights rights">
+      <li class="rights__item">
+        <a class="rights__link" href="#">
+          Пользовательское соглашение
+        </a>
+      </li>
+      <li class="rights__item">
+        <a class="rights__link" href="#">
+          Политика конфиденциальности
+        </a>
+      </li>
+      <li class="rights__item">
+        <a class="rights__link" href="#">
+          Информация не является публичной офертой
+        </a>
+      </li>
+    </ul>
+</div>
+
+  </div>
+ </footer>
+  </body>
+</html>

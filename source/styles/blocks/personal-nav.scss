@@ -1,0 +1,43 @@
+.personal-nav__list {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+
+  @media ($mediaDesktop) {
+    gap: 17px;
+  }
+}
+
+.personal-nav__item {
+  align-self: stretch;
+
+  &--burger {
+    @media ($mediaTablet) {
+      display: none;
+    }
+  }
+}
+
+.personal-nav__button {
+  @include link-reset;
+  display: block;
+  padding: 22px;
+  height: 100%;
+
+  svg {
+    display: block;
+    color: inherit;
+  }
+
+  @media ($mediaTablet) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  @media ($mediaTablet) {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+}
+

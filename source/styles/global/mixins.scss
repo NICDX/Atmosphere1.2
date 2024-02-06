@@ -1,0 +1,53 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin link-reset {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+@mixin button-reset {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 0;
+  outline: none;
+}
+
+@mixin image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: contain;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+@mixin container {
+  padding-left: $containerIndent;
+  padding-right: $containerIndent;
+  max-width: ($maxContainerWidth + $containerIndent * 2);
+  margin: 0 auto;
+
+  @media ($mediaDesktop) {
+    padding-left: $containerIndentDesktop;
+    padding-right: $containerIndentDesktop;
+    max-width: ($maxContainerWidth + $containerIndentDesktop * 2);
+  }
+}

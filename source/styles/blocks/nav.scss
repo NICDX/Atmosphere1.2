@@ -1,0 +1,38 @@
+nav {
+  background-color: $colorBaseSecondary;
+
+  &--hidden {
+    display: none;
+  }
+
+  @media ($mediaTablet) {
+    display: flex;
+  }
+}
+
+.nav__list {
+  @include list-reset;
+  display: none;
+
+  @media ($mediaTablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media ($mediaDesktop) {
+    gap: 20px;
+  }
+}
+
+.nav__link {
+  @include link-reset;
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 10;
+  line-height: 10px;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  padding: 20px;
+  color: $colorFont;
+}

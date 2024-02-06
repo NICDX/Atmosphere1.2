@@ -1,0 +1,18 @@
+.hero {
+  width: 100%;
+  max-height: 389px;
+  text-align: center;
+  background-image: url("../../images/intro-mobile.jpg");
+  background-color: $colorBaseSecondary;
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 360px;
+  margin-bottom: 13px;
+  margin-top: -21px;
+
+  @media ($mediaTablet) {
+    background-image: url("../../images/intro.jpg");
+    min-height: 911px;
+  }
+}

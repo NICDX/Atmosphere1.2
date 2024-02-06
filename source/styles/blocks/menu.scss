@@ -1,0 +1,16 @@
+menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__link-span {
+  padding: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.menu__cross {
+  display: none;
+  margin: 22px;
+}

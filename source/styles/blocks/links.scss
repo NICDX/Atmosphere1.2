@@ -1,0 +1,33 @@
+.links__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+
+  @media ($mediaTablet) {
+    gap: 19px;
+  }
+}
+
+.links__item {
+  max-width: 328px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media ($mediaTablet) {
+    flex-direction: row;
+    text-align: left;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  @media ($mediaDesktop) {
+    max-width: 552px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,11 @@
+.projectlipslider__content {
+  margin-left: 58px;
+
+  @media ($mediaDesktop) {
+    margin-left: 174px;
+  }
+}
+
+.projectlipslider__image {
+  border-radius: 6px;
+}

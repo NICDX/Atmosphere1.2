@@ -1,0 +1,64 @@
+
+.flip {
+
+}
+
+
+.flip__list {
+  @include list-reset;
+
+  @media ($mediaTablet) {
+    gap: 30px;
+    display: grid;
+    grid-template-rows: repeat(5, 1238px);
+    grid-template-columns: repeat(2, 562px);
+    margin: 0 auto;
+    width: min-content;
+    margin-bottom: 40px;
+  }
+
+}
+
+.flip__item {
+
+}
+
+
+.flip__title {
+
+}
+
+.flip__picture {
+
+}
+
+
+.flip__discription {
+
+}
+
+.flip__titlesec {
+
+}
+
+.flip__listsec {
+
+}
+
+.flip__listsecitem {
+
+}
+
+
+.flip__listsecitemdisc {
+
+}
+
+
+.flip__buttons {
+
+}
+
+.flip__button {
+
+}
