@@ -15,8 +15,8 @@
     <div class="header__container">
      <a class="header__logo" href="index.html">
       <picture>
-        <source type="image/svg+xml" media="(min-width: 1920px)" srcset="./images/logo-desktop.svg">
-        <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/logo-desktop.svg">
+        <source type="image/svg" media="(min-width: 1920px)" srcset="./images/logo-desktop.svg">
+        <source type="image/svg" media="(min-width: 768px)" srcset="./images/logo-desktop.svg">
         <img src="./images/logo-mobile.svg" width="63" height="44"
              alt="Логотип Бюро Атмосфера.">
       </picture>
@@ -80,15 +80,13 @@
 
     <div class="menu">
     <span class="menu__link-span">
-      <svg class="menu__burger js-toggle-button" width="26" height="18" >
-          <use href="./images/icons/burger.svg#burger">
-          </use>
-      </svg>
+      <button class="menu__burger js-toggle-button" type="button" >
+         <span class="visually-hidden">Бургер меню</span>
+      </button>
     </span>
-   <svg class="menu__cross" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"" role="img" aria-label="Atmosphere" >
-     <use xlink:href="#menu__cross">
-     </use>
-   </svg>
+   <button class="menu__cross" type ="button">
+     <span class="visually-hidden">Выход из меню</span>
+   </button>
   </div>
   </div>
 
@@ -267,68 +265,78 @@
       <h3 class="buro__title"> Более 9 лет</h3>
       <p class="buro__discription"> Наши покупатели квартир становятся нашими друзьями и постоянными инвесторами  Наши покупатели квартир становятся нашими друзьями и постоянными инвесторами Умеем делать ремонт и комплектации квартир с качественной техникой и материалами по цене эконом. Знаем где взять</p>
       <picture class="buro__picture">
-        <!--pic-->
+        <source media="(max-width: 1919px)"
+        srcset="./images/8982130 1.svg">
+      <source media="(max-width 767px)"
+        srcset="./images/8982130 1.svg">
+      <img class="advantages__image" src="./images/8982130 1.svg"
+        srcset="./images/8982130 1mob.svg" width="128" height="131" alt="Город">
       </picture>
     </li>
     <li class="buro__item">
       <h3 class="buro__title"> Более 9 лет</h3>
       <p class="buro__discription"> Наши покупатели квартир становятся нашими друзьями и постоянными инвесторами  Наши покупатели квартир становятся нашими друзьями и постоянными инвесторами Умеем делать ремонт и комплектации квартир с качественной техникой и материалами по цене эконом. Знаем где взять</p>
       <picture class="buro__picture">
-        <!--pic-->
+        <source media="(max-width: 1919px)"
+        srcset="./images/8660294 2.svg">
+      <source media="(max-width 767px)"
+        srcset="./images/8660294 2.svg">
+      <img class="advantages__image" src="./images/8660294 2.svg"
+        srcset="./images/8660294 2mob.svg" width="128" height="131" alt="Город">
       </picture>
     </li>
   </ol>
 </div>
 </section>
 
-  <section class="team">
-   <!-- Slider main container -->
+<section class="team">
+  <h3 class="team__title">Наша команда</h3>
 <div class="swiper teamswiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"> <div class="projectlipslider__content">
-    <img class="projectlipslider__image" src ="./images/swipepicjpg.jpg">
-    <p class = "projectlipslider__text">Ул. Московская</p>
-    <p class = "projectlipslider__description">г. Москва</p>
-  </div>
-  </div>
+ <!-- Additional required wrapper -->
+ <div class="swiper-wrapper">
+   <!-- Slides -->
+   <div class="swiper-slide"> <div class="projectlipslider__content">
+   <img class="projectlipslider__image" src ="./images/swipepicjpg.jpg">
+   <p class = "projectlipslider__text">Ул. Московская</p>
+   <p class = "projectlipslider__description">г. Москва</p>
+ </div>
+ </div>
 
-  <div class="swiper-slide">
-    <div class="projectlipslider__content">
-      <img class="projectlipslider__image" src ="./images/swipepicjpg.jpg">
-      <p class = "projectlipslider__text">Ул. Московская</p>
-      <p class = "projectlipslider__description">г. Москва</p>
-    </div>
-  </div>
+ <div class="swiper-slide">
+   <div class="projectlipslider__content">
+     <img class="projectlipslider__image" src ="./images/swipepicjpg.jpg">
+     <p class = "projectlipslider__text">Ул. Московская</p>
+     <p class = "projectlipslider__description">г. Москва</p>
+   </div>
+ </div>
 
-    <div class="swiper-slide"><div class="projectlipslider__content">
-      <img class="projectlipslider__image" src ="./images/swipepicjpg.jpg">
-      <p class = "projectlipslider__text">Ул. Московская</p>
-      <p class = "projectlipslider__description">г. Москва</p>
-    </div></div>
+   <div class="swiper-slide"><div class="projectlipslider__content">
+     <img class="projectlipslider__image" src ="./images/swipepicjpg.jpg">
+     <p class = "projectlipslider__text">Ул. Московская</p>
+     <p class = "projectlipslider__description">г. Москва</p>
+   </div></div>
 
-    <div class="swiper-slide"><div class="projectlipslider__content">
-      <img class="projectlipslider__image" src ="./images/swipepicjpg.jpg">
-      <p class = "projectlipslider__text">Ул. Московская</p>
-      <p class = "projectlipslider__description">г. Москва</p>
-    </div></div>
-  </div>
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev" style = "color:grey"></div>
-  <div class="swiper-button-next" style = "color:grey"></div>
+   <div class="swiper-slide"><div class="projectlipslider__content">
+     <img class="projectlipslider__image" src ="./images/swipepicjpg.jpg">
+     <p class = "projectlipslider__text">Ул. Московская</p>
+     <p class = "projectlipslider__description">г. Москва</p>
+   </div></div>
+ </div>
+ <!-- If we need navigation buttons -->
+ <div class="swiper-button-prev" style = "color:grey"></div>
+ <div class="swiper-button-next" style = "color:grey"></div>
 
 </div>
-  </div>
+ </div>
 </section>
 
 <section class="links">
     <ul class ="links__list">
   <li class="links__item">
     <picture>
-      <source media="(min-width: 1920px)"
+      <source media="(max-width: 1920px)"
       srcset="./images/clientsbutton.jpg">
-    <source media="(min-width 768px)"
+    <source media="(max-width 768px)"
       srcset="./images/clientsbutton.jpg">
     <img class="advantages__image" src="./images/clientsbutton.jpg"
       srcset="./images/clientsbutton.jpg" width="328" height="124" alt="Город">
@@ -337,9 +345,9 @@
 
     <li class="links__item">
     <picture>
-      <source media="(min-width: 1920px)"
+      <source media="(max-width: 1920px)"
       srcset="./images/investorsbutton.jpg">
-    <source media="(min-width 768px)"
+    <source media="(max-width 768px)"
       srcset="./images/investorsbutton.jpg">
     <img class="advantages__image" src="./images/investorsbutton.jpg"
       srcset="./images/investorsbutton.jpg" width="328" height="124" alt="Город">
@@ -348,9 +356,9 @@
 
   <li class="links__item">
     <picture>
-      <source media="(min-width: 1920px)"
+      <source media="(max-width: 1920px)"
       srcset="./images/whantstobe.jpg">
-    <source media="(min-width 768px)"
+    <source media="(max-width 768px)"
       srcset="./images/whantstobe.jpg">
     <img class="advantages__image" src="./images/whantstobe.jpg"
       srcset="./images/whantstobe.jpg" width="257" height="184" alt="Город">
@@ -368,8 +376,8 @@
     <div class="footer__innner">
       <div class="footer__logo">
         <picture>
-          <source type="image/svg+xml" media="(min-width: 1920px)" srcset="./images/atmlogofooter-desktop.svg">
-          <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/atmlogofooter-desktop.svg">
+          <source type="image/svg+xml" media="(min-width: 1919px)" srcset="./images/atmlogofooter-desktop.svg">
+          <source type="image/svg+xml" media="(min-width: 767px)" srcset="./images/atmlogofooter-desktop.svg">
           <img src="./images/atmlogofooter-mobile.svg" width="115" height="80"
                alt="Логотип Бюро Атмосфера.">
         </picture>
@@ -403,7 +411,7 @@
           </a>
         </li>
         <li class="social__item">
-            <span class="social__telephone">8080800808080.</span>
+            <span class="social__telephone">+79145484404.</span>
         </li>
       </ul>
     </div>
@@ -427,38 +435,37 @@
         </fieldset>
     </div>
     </div>
-
-  <div class="footer__information">
-  <ul class="footer__inf information">
-    <li class="information__item">
-      <a class="information__link" href="#" title="Instagramm">
-        <span class="visually-hidden">Instagramm.</span>
-        <svg width="20" height="20">
-          <!--Instagramm pic-->
-        </svg>
-      @Insta
-      </a>
-    </li>
-    <li class="information__item">
-      <a class="information__link" href="#" title="email">
-        <span class="visually-hidden">email.</span>
-        <svg width="20" height="20">
-          <!--email pic-->
-        </svg>
-      @email
-      </a>
-    </li>
-    <li class="information__item">
-    <a class="information__link" href="#" title="addres">
-      <span class="visually-hidden">Instagramm.</span>
-      <svg width="20" height="20">
-        <!--adress pic-->
-      </svg>
-    @addres
-    </a>
-    </li>
-  </ul>
- </div>
+    <div class="footer__information">
+      <ul class="footer__inf information">
+        <li class="information__item">
+          <a class="information__link" href="#" title="Instagramm">
+            <span class="visually-hidden">Instagramm.</span>
+            <svg width="20" height="20">
+              <!--Instagramm pic-->
+            </svg>
+          @Insta
+          </a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#" title="email">
+            <span class="visually-hidden">email.</span>
+            <svg width="20" height="20">
+              <!--email pic-->
+            </svg>
+          @email
+          </a>
+        </li>
+        <li class="information__item">
+        <a class="information__link" href="#" title="addres">
+          <span class="visually-hidden">Instagramm.</span>
+          <svg width="20" height="20">
+            <!--adress pic-->
+          </svg>
+        @addres
+        </a>
+        </li>
+      </ul>
+     </div>
 
  <div class="footer__rightsinformation">
     <ul class="footer__rights rights">

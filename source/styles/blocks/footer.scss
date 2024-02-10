@@ -17,7 +17,8 @@
 }
 
 .footer__logo-text {
-  display: none;
+  //display: none;
+  color: $colorFont;
 
   @media ($mediaDesktop) {
     display: block;

@@ -1,7 +1,7 @@
 .menu-mobile {
   display: none;
   position: absolute;
-  top: 63px;
+  top: -13px;
   z-index: 10;
   background-color: $colorBaseSecondary;
   width: 100%;
@@ -43,4 +43,9 @@
   .menu-mobile {
     display: none;
   }
+}
+
+.menu-mobile__link {
+  @include link-reset;
+  color: $colorFont;
 }

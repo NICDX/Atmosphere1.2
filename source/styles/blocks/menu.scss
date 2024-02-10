@@ -8,9 +8,19 @@ menu {
   padding: 22px;
   display: flex;
   align-items: center;
+  background-image: url("./images/icons/burger.svg");
 }
 
 .menu__cross {
   display: none;
   margin: 22px;
+  background-image: url("./images/icons/cross.svg");
+}
+
+.menu__burger {
+  //background-image: url("./images/icons/icon-burger.svg");
+
+  @media ($mediaTablet) {
+    display: none;
+  }
 }
