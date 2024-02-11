@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
+    <script src ="scripts/mobile.js" defer></script>
   </head>
 <body class ="page__body">
 
@@ -77,19 +78,19 @@
       </ul>
     </nav>
 
+
     <div class="menu">
-    <span class="menu__link-span">
-      <svg class="menu__burger js-toggle-button" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Atmosphere" >
-          <use xlink:href="#menu__burger">
-          </use>
-      </svg>
-    </span>
-   <svg class="menu__cross" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"" role="img" aria-label="Atmosphere" >
-     <use xlink:href="#menu__cross">
-     </use>
-   </svg>
-  </div>
-  </div>
+      <span class="menu__link-span">
+        <svg class="menu__burger js-toggle-button" width="24" height="24" >
+          <use href="./images/icons/stack.svg#cross">
+            </use>
+        </svg>
+      </span>
+     <svg class="menu__cross" width="24" height="24">
+      <use href="./images/icons/stack.svg#cross"></use>
+     </svg>
+    </div>
+    </div>
 
     <nav class="menu-mobile">
       <ul class="menu-mobile__list">
@@ -180,8 +181,8 @@
     <div class="footer__innner">
       <div class="footer__logo">
         <picture>
-          <source type="image/svg+xml" media="(min-width: 1920px)" srcset="./images/atmlogofooter-desktop.svg">
-          <source type="image/svg+xml" media="(min-width: 768px)" srcset="./images/atmlogofooter-desktop.svg">
+          <source type="image/svg+xml" media="(min-width: 1919px)" srcset="./images/atmlogofooter-desktop.svg">
+          <source type="image/svg+xml" media="(min-width: 767px)" srcset="./images/atmlogofooter-desktop.svg">
           <img src="./images/atmlogofooter-mobile.svg" width="115" height="80"
                alt="Логотип Бюро Атмосфера.">
         </picture>
@@ -197,25 +198,25 @@
       </div>
 
       <p class="footer__logo-text">Недвижимость. Дизайн. Инвестиции.</p>
-      <ul class="footer__social social">
-        <li class="social__item">
-          <a class="social__link" href="#" title="Whatsapp">
+      <ul class="footer__social">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#" title="Whatsapp">
             <span class="visually-hidden">Whatsapp.</span>
             <svg width="24" height="24">
               <use href="./images/icons/stack.svg#whatsapp"></use>
             </svg>
           </a>
         </li>
-        <li class="social__item">
-          <a class="social__link" href="#" title="Telegramm">
+        <li class="footer__social-item">
+          <a class="footer__social-link" href="#" title="Telegramm">
             <span class="visually-hidden">Telegramm.</span>
             <svg width="24" height="24">
               <use href="./images/icons/stack.svg#telegram"></use>
             </svg>
           </a>
         </li>
-        <li class="social__item">
-            <span class="social__telephone">8080800808080.</span>
+        <li class="footer__social-item">
+            <span class="footer__social-telephone">+79145484404.</span>
         </li>
       </ul>
     </div>
@@ -240,52 +241,52 @@
     </div>
     </div>
 
-  <div class="footer__information">
-  <ul class="footer__inf information">
-    <li class="information__item">
-      <a class="information__link" href="#" title="Instagramm">
-        <span class="visually-hidden">Instagramm.</span>
-        <svg width="20" height="20">
-          <!--Instagramm pic-->
-        </svg>
-      @Insta
-      </a>
-    </li>
-    <li class="information__item">
-      <a class="information__link" href="#" title="email">
-        <span class="visually-hidden">email.</span>
-        <svg width="20" height="20">
-          <!--email pic-->
-        </svg>
-      @email
-      </a>
-    </li>
-    <li class="information__item">
-    <a class="information__link" href="#" title="addres">
-      <span class="visually-hidden">Instagramm.</span>
-      <svg width="20" height="20">
-        <!--adress pic-->
-      </svg>
-    @addres
-    </a>
-    </li>
-  </ul>
- </div>
+    <div class="footer__information">
+      <ul class="footer__information-list">
+        <li class="footer__information-item">
+          <a class="footer__information-link" href="#" title="Instagramm">
+            <span class="visually-hidden">Instagramm.</span>
+            <svg width="24" height="24">
+              <use href="./images/icons/stack.svg#insta-mobile"></use>
+            </svg>
+         <p class="footer__information-text">@Insta</p>
+          </a>
+        </li>
+        <li class="footer__information-item">
+          <a class="footer__information-link" href="#" title="email">
+            <span class="visually-hidden">email.</span>
+            <svg width="24" height="24">
+              <use href="./images/icons/stack.svg#email"></use>
+            </svg>
+            <p class="footer__information-text"> ssd@mail.ru</p>
+          </a>
+        </li>
+        <li class="footer__information-item">
+        <a class="footer__information-link" href="#" title="addres">
+          <span class="visually-hidden">Instagramm.</span>
+          <svg width="24" height="24">
+            <use href="./images/icons/stack.svg#adress-mobile"></use>
+          </svg>
+          <p class="footer__information-text">Ул. Успенская 10 г. Москва</p>
+        </a>
+        </li>
+      </ul>
+     </div>
 
  <div class="footer__rightsinformation">
-    <ul class="footer__rights rights">
-      <li class="rights__item">
-        <a class="rights__link" href="#">
+    <ul class="footer__rightsinformation-list ">
+      <li class="footer__rightsinformation-item">
+        <a class="footer__rightsinformation-link" href="#">
           Пользовательское соглашение
         </a>
       </li>
-      <li class="rights__item">
-        <a class="rights__link" href="#">
+      <li class="footer__rightsinformation-item">
+        <a class="footer__rightsinformation-link" href="#">
           Политика конфиденциальности
         </a>
       </li>
-      <li class="rights__item">
-        <a class="rights__link" href="#">
+      <li class="footer__rightsinformation-item">
+        <a class="footer__rightsinformation-link" href="#">
           Информация не является публичной офертой
         </a>
       </li>

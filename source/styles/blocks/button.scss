@@ -1,0 +1,18 @@
+.button {
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background: $colorBasePrimary;
+  cursor: pointer;
+  width: 218px;
+  height: 40px;
+  margin: 0 auto 32px;
+  border: 1px solid $colorHover;
+  border-radius: 50px;
+
+  @media ($mediaTablet) {
+    width: 318px;
+    height: 56px;
+  }
+}
+
