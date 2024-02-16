@@ -6,7 +6,8 @@ import Swiper from 'swiper/bundle';
 const projectflip = new Swiper('.projectflip',{
   slidesPerView: 3,
   spaceBetween: 1,
-// Responsive breakpoints
+  centeredSlides: true,
+  // Responsive breakpoints
 breakpoints: {
   // when window width is >= 320px
 320: {
@@ -16,12 +17,12 @@ breakpoints: {
   // when window width is >= 480px
   480: {
     slidesPerView: 3,
-    spaceBetween: 30
+    spaceBetween: 20
   },
   // when window width is >= 640px
   640: {
     slidesPerView: 3,
-    spaceBetween: 40
+    spaceBetween: 20
   }
 },
 
@@ -34,6 +35,7 @@ breakpoints: {
 const teamswiper = new Swiper('.teamswiper',{
   slidesPerView: 3,
   spaceBetween: 1,
+  centeredSlides: true,
   breakpoints: {
     // when window width is >= 320px
   320: {
@@ -43,23 +45,24 @@ const teamswiper = new Swiper('.teamswiper',{
     // when window width is >= 480px
     480: {
       slidesPerView: 3,
-      spaceBetween: 30
+      spaceBetween: 20
     },
     // when window width is >= 640px
     640: {
       slidesPerView: 3,
-      spaceBetween: 40
+      spaceBetween: 20
     }
   },
 
   navigation: {
     nextEl: '.second',
     prevEl: '.third',
-  }
+  },
 });
 
 const projectsswiper = new Swiper('.projectsswiper',{
   slidesPerView: 1,
+ centeredSlides: true,
   navigation: {
     nextEl: '.four',
     prevEl: '.five',
