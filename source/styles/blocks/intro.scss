@@ -65,3 +65,15 @@
     margin: 34px 214px -8px -19px;
   }
 }
+
+.intro__container {
+  @media ($mediaTablet) {
+    width: 768px;
+    height: 770px;
+  }
+
+  @media ($mediaDesktop) {
+    width: 1920px;
+    height: 770px;
+  }
+}
