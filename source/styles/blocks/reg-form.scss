@@ -1,0 +1,46 @@
+.reg-form__title {
+  font-weight: 200;
+  font-size: 18px;
+  color: $colorFont;
+  padding-left: 47px;
+
+  @media ($mediaTablet) {
+    padding-left: 0;
+  }
+
+  }
+
+.reg-form__label-container {
+  padding-left: 47px;
+
+  @media ($mediaTablet) {
+    padding-left: 0;
+  }
+}
+
+.reg-form__button {
+  cursor: pointer;
+  border: 1px solid $colorFont;
+  border-radius: 50px;
+  background: $colorHover;
+  color: $colorFont;
+  font-size: 15px;
+  line-height: 28px;
+  width: 218px;
+  height: 40px;
+}
+
+.reg-form__input {
+  border: 1px solid $colorFont;
+  border-radius: 50px;
+  background: $colorHover;
+  color: $colorFont;
+  font-size: 15px;
+  line-height: 28px;
+  width: 218px;
+  height: 40px;
+}
+
+.reg-form__registration {
+  border: 0 none;
+}

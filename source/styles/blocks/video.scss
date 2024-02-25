@@ -1,15 +1,9 @@
 .video__container {
-  @media ($mediaTablet) {
-    width: 768px;
-    height: 770px;
+  @media ($mediaDesktop) {
     margin-bottom: 88px;
     margin-left: 888px;
-}
-
-  @media ($mediaDesktop) {
-    width: 1920px;
-    height: 770px;
   }
+
 }
 
 .video__item {

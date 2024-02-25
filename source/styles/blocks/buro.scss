@@ -1,0 +1,43 @@
+.buro__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+
+.buro {
+  @media ($mediaDesktop) {
+    padding-bottom: 500px;
+    padding-top: 10px;
+  }
+}
+
+.buro__form-title {
+  color: $colorHover;
+}
+
+.buro__form-button {
+  font-size: 15px;
+  line-height: 28px;
+  text-transform: uppercase;
+  background: $colorBasePrimary;
+  cursor: pointer;
+  width: 218px;
+  height: 40px;
+  margin: 0 auto 32px;
+  border: 1px solid $colorHover;
+  border-radius: 50px;
+}
+
+
+.buro__form-input {
+  border: 1px solid $colorHover;
+  border-radius: 50px;
+  background: $colorBasePrimary;
+  color: $colorFont;
+  font-size: 15px;
+  line-height: 28px;
+  width: 218px;
+  height: 40px;
+}
