@@ -1,3 +1,16 @@
 .projects {
   margin-bottom: 659px;
+
+  @media ($mediaDesktop) {
+    margin-left: 113px;
+  }
+
+}
+
+.projectprojectsswiper__image {
+  background-size: cover;
+  height: 100%;
+  width: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
