@@ -5,8 +5,8 @@
   justify-content: center;
   gap: 18px;
 
-  @media ($mediaTablet) {
-    gap: 19px;
+  @media ($mediaDesktop) {
+    flex-wrap: nowrap;
   }
 }
 
@@ -66,14 +66,11 @@
   }
 }
 
-.intro__container {
-  @media ($mediaTablet) {
-    width: 768px;
-    height: 770px;
-  }
-
+.intro {
   @media ($mediaDesktop) {
-    width: 1920px;
-    height: 770px;
+    padding-right: 298px;
+    padding-left: 300px;
+    padding-top: 24px;
+    padding-bottom: 130px;
   }
 }
