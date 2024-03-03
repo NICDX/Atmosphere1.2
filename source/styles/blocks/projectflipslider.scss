@@ -11,18 +11,6 @@
 }
 
 
-.projectlipslider__container {
-  @media ($mediaTablet) {
-    width: 768px;
-    height: 770px;
-  }
-
-  @media ($mediaDesktop) {
-    width: 1920px;
-    height: 770px;
-  }
-}
-
 .projectlipslider__title {
   font-size: 20px;
 

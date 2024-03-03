@@ -4,8 +4,8 @@ import Swiper from 'swiper/bundle';
 //import 'swiper/css';
 
 const projectflip = new Swiper('.projectflip',{
-  slidesPerView: 4,
-  spaceBetween: 1,
+  slidesPerView: 1,
+  spaceBetween: 10,
   centeredSlides: true,
   // Responsive breakpoints
 breakpoints: {
@@ -34,7 +34,7 @@ breakpoints: {
 
 const teamswiper = new Swiper('.teamswiper',{
   slidesPerView: 4,
-  spaceBetween: 20,
+  spaceBetween: 2,
   centeredSlides: true,
   breakpoints: {
     // when window width is >= 320px
