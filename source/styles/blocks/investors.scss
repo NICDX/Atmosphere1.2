@@ -1,0 +1,40 @@
+.investors__title {
+  font-size: 20px;
+
+  @media ($mediaDesktop) {
+    font-size: 40px;
+    max-width: 552px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding-bottom: 34px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.investors__list {
+  @include list-reset;
+
+  @media ($mediaDesktop) {
+    padding-right: 300px;
+    padding-left: 300px;
+  }
+}
+
+.investors__discription {
+  @media ($mediaDesktop) {
+    font-size: 25px;
+  }
+}
+
+.investors__listsec {
+  list-style-type: circle;
+}
+
+.investors__discriptionsec {
+  @media ($mediaDesktop) {
+    font-size: 20px;
+  }
+}

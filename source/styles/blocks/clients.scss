@@ -1,0 +1,40 @@
+.clients__title {
+  font-size: 20px;
+
+  @media ($mediaDesktop) {
+    font-size: 40px;
+    max-width: 552px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    //margin: 34px 214px -8px 444px;
+    padding-bottom: 34px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.clients__list {
+  @include list-reset;
+
+  @media ($mediaDesktop) {
+    padding-right: 300px;
+    padding-left: 300px;
+  }
+}
+
+.clients__discription {
+  @media ($mediaDesktop) {
+    font-size: 25px;
+  }
+}
+
+.clients__listsec {
+  list-style-type: circle;
+}
+
+.clients__discriptionsec {
+  @media ($mediaDesktop) {
+    font-size: 20px;
+  }
+}

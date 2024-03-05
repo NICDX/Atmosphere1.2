@@ -45,6 +45,10 @@
 }
 
 
+.flip__listsec {
+  list-style-type: circle;
+}
+
 .flip__listsecitemdisc {
   @media ($mediaTablet) {
     font-size: 24px;
@@ -79,5 +83,21 @@
   @media ($mediaTablet) {
     width: 318px;
     height: 56px;
+  }
+}
+
+.services__title {
+  font-size: 20px;
+
+  @media ($mediaDesktop) {
+    font-size: 40px;
+    max-width: 552px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    //margin: 34px 214px -8px 444px;
+    padding-bottom: 34px;
+    display: flex;
+    justify-content: space-around;
   }
 }

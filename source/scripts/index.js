@@ -63,8 +63,13 @@ const teamswiper = new Swiper('.teamswiper',{
 const projectsswiper = new Swiper('.projectsswiper',{
   slidesPerView: 1,
   centeredSlides: true,
- // navigation: {
-    //nextEl: '.four',
-   // prevEl: '.five',
-  //}
+
 });
+
+//'.video'.onwheel = function() {
+// if (event.ctrlKey) {
+//   return false;
+// }
+//};
+
+
