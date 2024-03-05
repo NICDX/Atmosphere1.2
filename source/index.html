@@ -71,7 +71,7 @@
           </a>
         </li>
         <li class="personal-nav__item">
-          <a class="personal-nav__button" href="#" title="Заказать звонок">  <!--При нажатии ссылки открывается модальное окно-->
+          <a class="personal-nav__button" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#" title="Заказать звонок">  <!--При нажатии ссылки открывается модальное окно-->
             <svg width="24" height="24">
               <use href="./images/icons/stack.svg#phone"></use>
             </svg>
@@ -497,30 +497,56 @@
   </div>
  </footer>
 
-<!-- Button trigger modal -->
+<!--Button trigger modal-->
 <!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
-</button>
+</button>-->
 
 
-Modal
+<!--Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+    <div class=" atmmodal__backcolor  modal-content">
+      <div class=" atmmodal__header modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+        <div class="buro__container">
+          <form class="reg-form" action="#" method="post">   <!--в значении параметра action должна быть ссылка на сайт, на который передается инфа-->
+            <div class="reg-form__container">
+              <fieldset class="reg-form__registration reg-form__name">
+                <legend class=" atmmodal__title buro__form-title">Введите ваши данные</legend>
+                <p class="reg-form__label-container">
+                  <input class=" atmmodal__form-input buro__form-input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+                </p>
+                <p class="reg-form__label-container">
+                  <input class=" atmmodal__form-input  buro__form-input" type="text" id="telephonenumber" name="telephonenumber" placeholder="Ваш номер"
+                    required>
+                </p>
+                <p class="reg-form__label-container">
+                  <button class="buro__form-button" data-bs-toggle="modal" type="submit">Заказать звонок</button>
+                </p>
+              </fieldset>
+        </div>
     </div>
   </div>
-</div>-->
+</div>
+
+
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class=" atmmodal__backcolor  modal-content">
+      <div class=" atmmodal__header modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="buro__container">
+          <p class="atmmodal__text"> gggg</p>
+          <p class="atmmodal__text"> gggg</p>
+        </div>
+    </div>
+  </div>
+</div> -->
 
 
 </body>
