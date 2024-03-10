@@ -41,3 +41,29 @@
   width: 218px;
   height: 40px;
 }
+
+.buro {
+  margin: 0 auto;
+
+  @media ($mediaDesktop) {
+    padding-left: 100px;
+    padding-right: 10px;
+  }
+}
+
+
+.buro__list {
+  @include list-reset;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+
+  @media ($mediaDesktop) {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

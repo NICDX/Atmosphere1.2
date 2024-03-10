@@ -7,9 +7,10 @@
 }
 
 .video__item {
+  margin: 0 auto 32px;
   @media ($mediaTablet) {
     width: 768px;
     height: 769px;
   }
 
- }
+}

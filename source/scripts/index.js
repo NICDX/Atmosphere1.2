@@ -5,26 +5,28 @@ import Swiper from 'swiper/bundle';
 
 const projectflip = new Swiper('.projectflip',{
   slidesPerView: 1,
-  spaceBetween: 10,
   centeredSlides: true,
+  grid: {
+    rows: 1,
+  },
+
   // Responsive breakpoints
-breakpoints: {
-  // when window width is >= 320px
-320: {
-  slidesPerView: 1,
-  spaceBetween: 20
+  breakpoints: {
+    // when window width is >= 320px
+  320: {
+    slidesPerView: 1,
+    },
+    // when window width is >= 480px
+    768: {
+      slidesPerView: 4,
+    },
+    // when window width is >= 640px
+    1920: {
+      centeredSlides: true,
+      slidesPerView: 7.5,
+      slidesPerColumn: 1,
+    }
   },
-  // when window width is >= 480px
-  480: {
-    slidesPerView: 4,
-    spaceBetween: 20
-  },
-  // when window width is >= 640px
-  640: {
-    slidesPerView: 4,
-    spaceBetween: 20
-  }
-},
 
   navigation: {
     nextEl: '.swiper-button-next',
@@ -65,11 +67,4 @@ const projectsswiper = new Swiper('.projectsswiper',{
   centeredSlides: true,
 
 });
-
-//'.video'.onwheel = function() {
-// if (event.ctrlKey) {
-//   return false;
-// }
-//};
-
 
