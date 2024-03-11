@@ -11,3 +11,12 @@
     margin: 34px 214px 24px -19px;
   }
 }
+
+.team {
+  @media ($mediaDesktop) {
+    width: 1920px;
+    height: 686px;
+    left: 0;
+    right: 0;
+  }
+}

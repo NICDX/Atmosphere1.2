@@ -1,5 +1,6 @@
 .button {
-  font-size: 18px;
+  @include link-reset;
+  font-size: 11px;
   line-height: 18px;
   text-transform: uppercase;
   background: $colorBasePrimary;

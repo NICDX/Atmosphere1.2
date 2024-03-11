@@ -17,3 +17,19 @@
     margin: 34px 214px -8px -19px;
   }
 }
+
+.projectflipslider {
+  @media ($mediaDesktop) {
+    width: 1920px;
+    height: 770px;
+  }
+}
+
+.projectlipslider__container {
+  @media ($mediaDesktop) {
+    min-width: 1321px;
+    height: 655px;
+    left: 299px;
+    right: 300px;
+  }
+}

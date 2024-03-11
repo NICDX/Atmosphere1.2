@@ -46,8 +46,9 @@
   margin: 0 auto;
 
   @media ($mediaDesktop) {
-    padding-left: 100px;
-    padding-right: 10px;
+    width: 1920px;
+    left: 0;
+    right: 0;
   }
 }
 

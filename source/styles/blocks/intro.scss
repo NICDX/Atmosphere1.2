@@ -1,3 +1,24 @@
+
+.intro {
+  @media ($mediaDesktop) {
+  width: 1920px;
+  height: 552px;
+  padding-right: 298px;
+  padding-left: 300px;
+  padding-top: 24px;
+  padding-bottom: 130px;
+  }
+}
+
+.intro__container {
+  @media ($mediaDesktop) {
+    min-width: 1320px;
+    margin: 0 auto;
+    }
+}
+
+
+
 .intro__piclist {
   @include list-reset;
   display: flex;
@@ -63,14 +84,5 @@
     align-items: center;
     text-align: center;
     margin: 34px 214px -8px -19px;
-  }
-}
-
-.intro {
-  @media ($mediaDesktop) {
-    padding-right: 298px;
-    padding-left: 300px;
-    padding-top: 24px;
-    padding-bottom: 130px;
   }
 }

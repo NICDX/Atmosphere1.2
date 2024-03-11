@@ -5,16 +5,13 @@ import Swiper from 'swiper/bundle';
 
 const projectflip = new Swiper('.projectflip',{
   slidesPerView: 1,
-  centeredSlides: true,
-  grid: {
-    rows: 1,
-  },
 
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
   320: {
     slidesPerView: 1,
+    centeredSlides: true
     },
     // when window width is >= 480px
     768: {
@@ -22,9 +19,10 @@ const projectflip = new Swiper('.projectflip',{
     },
     // when window width is >= 640px
     1920: {
+      slidesPerView: 4,
       centeredSlides: true,
-      slidesPerView: 7.5,
-      slidesPerColumn: 1,
+      spaceBetween: 200
+
     }
   },
 
@@ -42,6 +40,7 @@ const teamswiper = new Swiper('.teamswiper',{
     // when window width is >= 320px
   320: {
     slidesPerView: 1,
+    centeredSlides: true,
     spaceBetween: 20
     },
     // when window width is >= 480px
@@ -50,9 +49,10 @@ const teamswiper = new Swiper('.teamswiper',{
       spaceBetween: 20
     },
     // when window width is >= 640px
-    640: {
+    1920: {
       slidesPerView: 4,
-      spaceBetween: 20
+      spaceBetween: 2,
+      slidesPerColumn: 1
     }
   },
 
@@ -64,7 +64,7 @@ const teamswiper = new Swiper('.teamswiper',{
 
 const projectsswiper = new Swiper('.projectsswiper',{
   slidesPerView: 1,
-  centeredSlides: true,
+  centeredSlides: true
 
 });
 
