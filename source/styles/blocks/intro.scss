@@ -14,10 +14,8 @@
   @media ($mediaDesktop) {
     min-width: 1320px;
     margin: 0 auto;
-    }
+ }
 }
-
-
 
 .intro__piclist {
   @include list-reset;
