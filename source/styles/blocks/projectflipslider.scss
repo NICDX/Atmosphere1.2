@@ -18,18 +18,18 @@
   }
 }
 
-.projectflipslider {
-  @media ($mediaDesktop) {
-    width: 1920px;
-    height: 770px;
-  }
-}
+//.projectflipslider {
+  //@media ($mediaDesktop) {
+    //min-width: 1920px;
+  //  height: 770px;
+  //}
+//}
 
 .projectlipslider__container {
   @media ($mediaDesktop) {
-    min-width: 1321px;
-    height: 655px;
-    left: 299px;
-    right: 300px;
+    min-width: 1920px;
+    height: 686px;
+    left: 0;
+    right: 0;
   }
 }

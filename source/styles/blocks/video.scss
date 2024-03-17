@@ -17,7 +17,7 @@
 
 .video {
   @media ($mediaDesktop) {
-    width: 1920px;
+    min-width: 1920px;
     height: 832px;
     left: 0;
     right: 0;

@@ -14,7 +14,16 @@
 
 .team {
   @media ($mediaDesktop) {
-    width: 1920px;
+    //width: 1920px;
+    //height: 686px;
+    left: 0;
+    right: 0;
+  }
+}
+
+.team__container {
+  @media ($mediaDesktop) {
+    min-width: 1920px;
     height: 686px;
     left: 0;
     right: 0;
