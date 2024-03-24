@@ -27,9 +27,9 @@
 
 .projectlipslider__container {
   @media ($mediaDesktop) {
-    min-width: 1920px;
-    height: 686px;
-    left: 0;
-    right: 0;
+    min-width: 1321px;
+    min-height: 686px;
+    padding-left: 299px;
+    padding-right: 300px;
   }
 }

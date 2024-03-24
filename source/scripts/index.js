@@ -19,7 +19,7 @@ const projectflip = new Swiper('.projectflip',{
     },
     // when window width is >= 640px
     1920: {
-      slidesPerView: 4,
+      slidesPerView: 5.5,
       centeredSlides: true,
       spaceBetween: 200
 

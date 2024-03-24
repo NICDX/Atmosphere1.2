@@ -1,26 +1,21 @@
 .video__container {
+  margin-left: 59px;
+
   @media ($mediaDesktop) {
-    margin-bottom: 88px;
-    margin-left: 888px;
+    max-width: 1110px;
+    min-height: 671px;
+    margin-left: 710px;
+    margin-right: 398px;
   }
 
 }
 
 .video__item {
   margin: 0 auto 32px;
+
   @media ($mediaTablet) {
     width: 768px;
     height: 769px;
   }
 
 }
-
-.video {
-  @media ($mediaDesktop) {
-    min-width: 1920px;
-    height: 832px;
-    left: 0;
-    right: 0;
-  }
-}
-
