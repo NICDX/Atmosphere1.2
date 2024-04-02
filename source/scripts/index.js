@@ -19,9 +19,9 @@ const projectflip = new Swiper('.projectflip',{
     },
     // when window width is >= 640px
     1920: {
-      slidesPerView: 5.5,
-      centeredSlides: true,
-      spaceBetween: 200
+      slidesPerView: 4,
+      centeredSlides: false,
+      spaceBetween: 7
 
     }
   },
@@ -51,8 +51,8 @@ const teamswiper = new Swiper('.teamswiper',{
     // when window width is >= 640px
     1920: {
       slidesPerView: 4,
-      spaceBetween: 2,
-      slidesPerColumn: 1
+      spaceBetween: 7,
+      centeredSlides: false
     }
   },
 

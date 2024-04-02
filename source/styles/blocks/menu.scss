@@ -1,7 +1,11 @@
-menu {
+.menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media ($mediaTablet) {
+    display: none;
+  }
 }
 
 .menu__link-span {

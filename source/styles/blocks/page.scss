@@ -12,7 +12,7 @@
   height: 100%;
   flex-direction: column;
   margin: 0;
-  min-width: 320px;
+  min-width: 360px;
   //align-items: center;
 
   @media ($mediaTablet) {
@@ -34,4 +34,8 @@
     font-size: 42px;
     line-height: 64px;
   }
+}
+
+.page__main {
+  flex-grow: 1;
 }

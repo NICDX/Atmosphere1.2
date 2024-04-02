@@ -4,14 +4,15 @@
   @media ($mediaDesktop) {
     max-width: 1110px;
     min-height: 671px;
-    margin-left: 710px;
-    margin-right: 398px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
 
 .video__item {
   margin: 0 auto 32px;
+  display: block;
 
   @media ($mediaTablet) {
     width: 768px;
