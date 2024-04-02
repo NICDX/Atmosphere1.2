@@ -11,11 +11,12 @@ const projectflip = new Swiper('.projectflip',{
     // when window width is >= 320px
   320: {
     slidesPerView: 1,
-    centeredSlides: true
+    centeredSlides: false
     },
     // when window width is >= 480px
     768: {
       slidesPerView: 4,
+      spaceBetween: 7
     },
     // when window width is >= 640px
     1920: {
@@ -40,13 +41,12 @@ const teamswiper = new Swiper('.teamswiper',{
     // when window width is >= 320px
   320: {
     slidesPerView: 1,
-    centeredSlides: true,
-    spaceBetween: 20
+    centeredSlides: false,
     },
     // when window width is >= 480px
     480: {
       slidesPerView: 4,
-      spaceBetween: 20
+      spaceBetween: 7
     },
     // when window width is >= 640px
     1920: {
@@ -64,7 +64,7 @@ const teamswiper = new Swiper('.teamswiper',{
 
 const projectsswiper = new Swiper('.projectsswiper',{
   slidesPerView: 1,
-  centeredSlides: true
+  centeredSlides: false
 
 });
 
