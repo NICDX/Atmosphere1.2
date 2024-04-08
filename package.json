@@ -59,6 +59,7 @@
     "w3c-html-validator": "1.6.4"
   },
   "dependencies": {
+    "gulp-connect-php": "^1.0.3",
     "swiper": "^11.0.5"
   }
 }
