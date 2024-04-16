@@ -11,7 +11,7 @@ const projectflip = new Swiper('.projectflip',{
     // when window width is >= 320px
   320: {
     slidesPerView: 1,
-    centeredSlides: false
+    centeredSlides: true
     },
     // when window width is >= 480px
     768: {
@@ -41,7 +41,7 @@ const teamswiper = new Swiper('.teamswiper',{
     // when window width is >= 320px
   320: {
     slidesPerView: 1,
-    centeredSlides: false,
+    centeredSlides: true,
     },
     // when window width is >= 480px
     480: {

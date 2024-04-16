@@ -2,7 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
+  margin: auto;
+  padding: auto;
 }
 
 
@@ -55,11 +56,10 @@
 
 .buro__list {
   @include list-reset;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+  margin: 10px;
 
   @media ($mediaDesktop) {
     min-width: 100%;
