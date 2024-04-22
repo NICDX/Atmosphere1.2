@@ -34,8 +34,21 @@
 .projectprojectsswiper__image {
   background-size: cover;
   height: 100%;
-  width: 70%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+.projectsswiper__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 316px;
+  min-height: 268px;
+
+  @media ($mediaTablet) {
+    max-width: 1321px;
+    min-height: 686px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
