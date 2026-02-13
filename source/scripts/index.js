@@ -62,9 +62,14 @@ const teamswiper = new Swiper('.teamswiper',{
   },
 });
 
+// ОБНОВЛЕНО: добавлена навигация по макету
 const projectsswiper = new Swiper('.projectsswiper',{
   slidesPerView: 1,
-  centeredSlides: false
+  centeredSlides: false,
+  spaceBetween: 30,
 
+  navigation: {
+    nextEl: '.projectsswiper-button-next',
+    prevEl: '.projectsswiper-button-prev',
+  },
 });
-

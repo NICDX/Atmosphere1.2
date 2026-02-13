@@ -1,51 +1,66 @@
+// По макету Image 7: тёмный фон, пункты по центру, разделители, лого видно сверху
 .menu-mobile {
   display: none;
   position: absolute;
-  top: -19px;
+  top: 100%;
+  left: 0;
   z-index: 10;
-  background-color: $colorBaseSecondary;
+  background-color: rgba(20, 19, 19, 0.95);
   width: 100%;
+  min-height: calc(100vh - 56px);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .menu-mobile__list {
   padding: 0;
   margin: 0;
-
+  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
+// По макету: крупный текст, центрирован, border-top на каждом пункте
 .menu-mobile__item {
-  padding-top: 20px;
-  padding-bottom: 21px;
+  padding: 20px 0;
   width: 100%;
-  border-top: 1px solid $colorFont;
-
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   text-align: center;
-
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500px;
-  line-height: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+
+  &:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
 
-.menu-mobile__item:last-child {
-  border-bottom: 1px solid $colorFont;
-}
+// По макету: "Заказать звонок" — с подчёркиванием, внизу меню
+.menu-mobile__item--cta {
+  border: none;
+  padding-top: 30px;
 
-.menu-mobile__item:active {
-  background-color: $colorFont;
+  .menu-mobile__link {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
 }
 
 @media ($mediaTablet) {
   .menu-mobile {
-    display: none;
+    display: none !important;
   }
 }
 
 .menu-mobile__link {
   @include link-reset;
   color: $colorFont;
+  font-size: 16px;
 }

@@ -1,112 +1,139 @@
-
+// По мобильному макету Image 5: карточки в одну колонку
 .flip__list {
   @include list-reset;
+  display: flex;
+  flex-direction: column;
 
   @media ($mediaTablet) {
     gap: 30px;
     display: grid;
-    grid-template-rows: repeat(2, 1238px);
-    grid-template-columns: repeat(2, 562px);
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
-    width: min-content;
+    max-width: 1200px;
     margin-bottom: 40px;
   }
-
 }
 
 .flip__item {
   border-bottom: 1px solid #141313;
+  padding: 15px;
+
+  @media ($mediaTablet) {
+    padding: 20px;
+  }
 }
 
-
 .flip__title {
+  font-size: 16px;
+  font-weight: 700;
+
   @media ($mediaTablet) {
     font-size: 24px;
   }
 }
 
 .flip__picrureimg {
-  @media ($mediaTablet) {
-    align-items: center;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
   }
 }
 
-
 .flip__discription {
+  font-size: 14px;
+  line-height: 1.5;
+
   @media ($mediaTablet) {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 30px;
     margin-top: 16px;
   }
 }
 
 .flip__titlesec {
+  font-size: 15px;
+  font-weight: 700;
+
   @media ($mediaTablet) {
     font-size: 24px;
   }
 }
-
 
 .flip__listsec {
   list-style-type: circle;
 }
 
 .flip__listsecitemdisc {
+  font-size: 14px;
+
   @media ($mediaTablet) {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
-
 .flip__buttons {
-  display: grid;
-  justify-content: center;
-  padding-bottom: 142px;
-  padding-top: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px 40px;
+  gap: 12px;
 
   @media ($mediaTablet) {
-    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 60px;
+    padding-top: 33px;
   }
-
 }
 
 .flip__button {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   background: $colorBasePrimary;
   cursor: pointer;
-  width: 218px;
+  width: 100%;
+  max-width: 280px;
   height: 40px;
-  margin: 0 auto 32px;
   border: 1px solid $colorHover;
   border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media ($mediaTablet) {
     width: 318px;
     height: 56px;
+    font-size: 14px;
   }
 }
 
 .services__text {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1920px;
+  max-width: $maxContainerWidth;
+  padding: 15px;
+
+  @media ($mediaTablet) {
+    padding: 20px 30px;
+  }
 }
 
 .services__title {
   font-size: 20px;
-
+  margin-bottom: 15px;
+  font-weight: 700;
 
   @media ($mediaDesktop) {
     font-size: 40px;
-    max-width: 552px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 34px 214px -8px 86px;
+    padding-left: 80px;
     padding-bottom: 34px;
-    display: flex;
-    justify-content: space-around;
   }
 }

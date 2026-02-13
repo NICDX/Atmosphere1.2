@@ -1,97 +1,207 @@
 .footer {
   background-color: $colorBaseSecondary;
+  width: 100%;
 }
 
 .footer__logo {
   @include link-reset;
   display: block;
-  height: 36px;
 
   img {
     @include image;
-  }
-
-  @media ($mediaDesktop) {
-    display: inline-block;
   }
 }
 
 .footer__logo-text {
   color: $colorFont;
-  padding-left: 28px;
-  margin-top: -4px;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+  padding: 0;
 
-  @media ($mediaDesktop) {
-    display: block;
-    margin: -5px -35px 5px;
-    font-size: 14px;
-    padding-right: 111px;
+  @media ($mediaTablet) {
+    font-size: 16px;
   }
 }
 
+// По мобильному макету: всё по центру, вертикально
 .footer__container {
-  color: $colorBaseSecondary;
+  color: $colorFont;
+  padding: 40px 15px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
   @media ($mediaTablet) {
-    @include container;
-    padding-top: 60px;
-  }
-
-  @media ($mediaDesktop) {
-    display: flex;
+    padding: 60px 20px 40px;
+    max-width: $maxContainerWidth;
+    margin: 0 auto;
   }
 }
 
 .footer__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid $colorBaseSecondary;
-
-  @media ($mediaTablet) {
-    border-bottom: none;
-    padding: 0;
-    margin-bottom: 27px;
-  }
+  display: none;
 
   @media ($mediaDesktop) {
     display: block;
-    margin: 0 30px 0 0;
-    flex-shrink: 0;
-    max-width: 318px;
-    width: 100%;
   }
 }
 
+.footer__innner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
 
 .footer__copyright-text {
   display: flex;
   color: white;
-  font-size: 12px;
+  font-size: 11px;
   margin: 0;
   width: 100%;
   gap: 3px;
   justify-content: center;
   line-height: 16px;
+
+  @media ($mediaTablet) {
+    font-size: 12px;
+  }
+}
+
+.footer__fiealdset {
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 300px;
+
+  @media ($mediaTablet) {
+    max-width: 400px;
+  }
+}
+
+.footer__social {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.footer__social-link {
+  @include link-reset;
+  display: flex;
+  align-items: center;
+}
+
+.footer__social-telephone {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+
+  @media ($mediaTablet) {
+    font-size: 18px;
+  }
+}
+
+// По мобильному макету: навигация в футере — вертикально
+.footer__nav {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  font-size: 13px;
+
+  @media ($mediaTablet) {
+    gap: 20px;
+    font-size: 14px;
+  }
+}
+
+// По мобильному макету: контакты вертикально, с иконками
+.footer__information {
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .footer__information-list {
+  @include list-reset;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+
+  @media ($mediaTablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+.footer__information-item {
+  display: flex;
+  align-items: center;
 }
 
 .footer__information-link {
   @include link-reset;
   color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-direction: column;
 
+  @media ($mediaTablet) {
+    flex-direction: row;
+  }
+}
+
+.footer__information-text {
+  margin: 0;
+  font-size: 13px;
+
+  @media ($mediaTablet) {
+    font-size: 14px;
+  }
+}
+
+.footer__rightsinformation {
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+
+.footer__rightsinformation-list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+
+  @media ($mediaTablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
 }
 
 .footer__rightsinformation-link {
   @include link-reset;
   color: white;
-}
+  font-size: 11px;
+  opacity: 0.7;
 
-.footer__social-telephone {
-  color: white;
+  &:hover {
+    opacity: 1;
+  }
+
+  @media ($mediaTablet) {
+    font-size: 12px;
+  }
 }

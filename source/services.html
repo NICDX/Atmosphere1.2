@@ -2,7 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Бюро Атмосфера></title>
+    <title>Бюро Атмосфера</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -381,22 +381,25 @@
 
    <div class="footer__fiealdset">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <form class="reg-form" action="#" method="post">   <!--в значении параметра action должна быть ссылка на сайт, на который передается инфа-->
+    <form class="reg-form" action="#" method="post" id="footerRegForm">
       <div class="reg-form__container">
         <fieldset class="reg-form__registration reg-form__name">
           <legend class="reg-form__title  reg-form__represent">Хотите заказать звонок ?</legend>
           <p class="reg-form__label-container">
-            <input class="reg-form__input input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+            <input class="reg-form__input input" type="text" id="footer-name" name="name" placeholder="Ваше имя" required>
           </p>
           <p class="reg-form__label-container">
-            <input class="reg-form__input input" type="text" id="telephonenumber" name="telephonenumber" placeholder="Ваш номер"
+            <input class="reg-form__input input" type="tel" id="footer-telephonenumber" name="telephonenumber" placeholder="Ваш номер"
               required>
           </p>
           <p class="reg-form__label-container">
             <button class="reg-form__button" type="submit">Заказать звонок</button>
           </p>
+          <div class="form-message form-message--success" id="footerSuccessMsg">Спасибо! Мы свяжемся с вами в ближайшее время.</div>
+          <div class="form-message form-message--error" id="footerErrorMsg">Ошибка отправки. Попробуйте ещё раз.</div>
         </fieldset>
-    </div>
+      </div>
+    </form>
     </div>
 
     <div class="footer__information">
@@ -466,25 +469,31 @@
       </div>
       <div class="modal-body">
         <div class="buro__container">
-          <form class="reg-form" action="#" method="post">   <!--в значении параметра action должна быть ссылка на сайт, на который передается инфа-->
+          <form class="reg-form" action="#" method="post" id="modalRegForm">
             <div class="reg-form__container">
               <fieldset class="reg-form__registration reg-form__name">
                 <legend class=" atmmodal__title buro__form-title">Введите ваши данные</legend>
                 <p class="reg-form__label-container">
-                  <input class=" atmmodal__form-input buro__form-input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+                  <input class=" atmmodal__form-input buro__form-input" type="text" id="modal-name" name="name" placeholder="Ваше имя" required>
                 </p>
                 <p class="reg-form__label-container">
-                  <input class=" atmmodal__form-input  buro__form-input" type="text" id="telephonenumber" name="telephonenumber" placeholder="Ваш номер"
+                  <input class=" atmmodal__form-input  buro__form-input" type="tel" id="modal-telephonenumber" name="telephonenumber" placeholder="Ваш номер"
                     required>
                 </p>
                 <p class="reg-form__label-container">
-                  <button class="buro__form-button" data-bs-toggle="modal" type="submit">Заказать звонок</button>
+                  <button class="buro__form-button" type="submit">Заказать звонок</button>
                 </p>
+                <div class="form-message form-message--success" id="modalSuccessMsg">Спасибо! Мы свяжемся с вами в ближайшее время.</div>
+                <div class="form-message form-message--error" id="modalErrorMsg">Ошибка отправки. Попробуйте ещё раз.</div>
               </fieldset>
+            </div>
+          </form>
         </div>
+      </div>
     </div>
   </div>
 </div>
 
+  <script src="scripts/form-handler.js" defer></script>
 </body>
 </html>

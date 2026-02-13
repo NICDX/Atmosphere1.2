@@ -4,7 +4,7 @@
   align-items: center;
 
   @media ($mediaDesktop) {
-    gap: 17px;
+    gap: 10px;
   }
 }
 
@@ -32,12 +32,22 @@
   @media ($mediaTablet) {
     padding-top: 28px;
     padding-bottom: 28px;
-  }
-
-  @media ($mediaTablet) {
     display: flex;
     gap: 8px;
     align-items: center;
   }
 }
 
+// По макету: номер телефона отображается в хедере рядом с иконками
+.personal-nav__phone {
+  color: $colorFont;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  display: none;
+
+  @media ($mediaTablet) {
+    display: block;
+    padding: 0 15px;
+  }
+}

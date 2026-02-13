@@ -3,68 +3,157 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin: auto;
-  padding: auto;
+  padding: 15px;
+
+  @media ($mediaTablet) {
+    padding: 20px;
+  }
 }
 
-
+// По макету mobile Image 1,2: форма — тёмный блок, вертикальный, центрированный
 .buro__reg {
+  padding: 20px 15px;
+
   @media ($mediaDesktop) {
-    padding-bottom: 500px;
+    padding-bottom: 100px;
     padding-top: 10px;
+  }
+
+  .buro__container {
+    background-color: $colorBaseSecondary;
+    border-radius: 12px;
+    padding: 30px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+
+    @media ($mediaTablet) {
+      max-width: 900px;
+      padding: 40px 30px;
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 }
 
 .buro__form-title {
-  color: $colorHover;
+  color: $colorFont;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
+// По макету: кнопка — полная ширина на мобилке
 .buro__form-button {
   font-size: 15px;
   line-height: 28px;
-  text-transform: uppercase;
-  background: $colorBasePrimary;
+  text-transform: none;
+  background: $colorBaseSecondary;
+  color: $colorFont;
   cursor: pointer;
-  width: 218px;
-  height: 40px;
-  margin: 0 auto 32px;
-  border: 1px solid $colorHover;
+  width: 100%;
+  max-width: 280px;
+  height: 44px;
+  margin: 0 auto;
+  border: 1px solid $colorFont;
   border-radius: 50px;
+  display: block;
+  transition: background 0.3s;
+
+  &:hover {
+    background: lighten($colorBaseSecondary, 10%);
+  }
+
+  @media ($mediaTablet) {
+    width: 218px;
+    height: 48px;
+  }
 }
 
-
+// По макету: инпуты на мобилке на полную ширину
 .buro__form-input {
-  border: 1px solid $colorHover;
+  border: 1px solid $colorFont;
   border-radius: 50px;
-  background: $colorBasePrimary;
+  background: transparent;
   color: $colorFont;
   font-size: 15px;
   line-height: 28px;
-  width: 218px;
-  height: 40px;
+  width: 100%;
+  max-width: 280px;
+  height: 44px;
+  padding: 0 20px;
+  text-align: center;
+  display: block;
+  margin: 0 auto 12px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+  }
+
+  @media ($mediaTablet) {
+    width: 218px;
+    height: 48px;
+    margin: 0;
+  }
 }
 
 .buro {
   margin: 0 auto;
-
-  @media ($mediaDesktop) {
-    width: 1920px;
-    left: 0;
-    right: 0;
-  }
+  max-width: $maxContainerWidth;
 }
-
 
 .buro__list {
   @include list-reset;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   list-style-type: none;
-  margin: 10px;
+  margin: 0;
 
   @media ($mediaDesktop) {
-    min-width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin: 10px;
   }
 }
 
+.buro__item {
+  padding: 15px;
+
+  @media ($mediaTablet) {
+    padding: 20px;
+  }
+}
+
+.buro__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buro__title {
+  font-size: 18px;
+  font-weight: 700;
+
+  @media ($mediaDesktop) {
+    font-size: 30px;
+  }
+}
+
+.buro__discription {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.buro__picture {
+  max-width: 100%;
+  height: auto;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

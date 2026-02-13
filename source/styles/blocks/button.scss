@@ -10,6 +10,9 @@
   margin: 0 auto 32px;
   border: 1px solid $colorHover;
   border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media ($mediaTablet) {
     width: 318px;
@@ -17,3 +20,15 @@
   }
 }
 
+// Обёртки — сброс border, но сохранение центрирования
+.intro__button.button,
+.flip__button.button {
+  border: none;
+  background: none;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  //margin: 0 0 32px;
+  display: flex;
+  justify-content: center;
+}

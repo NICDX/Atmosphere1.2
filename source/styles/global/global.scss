@@ -1,8 +1,20 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+picture {
+  display: block;
 }
 
 .visually-hidden {
@@ -15,10 +27,6 @@
   border: 0;
   clip: rect(0 0 0 0);
 }
-
-//.container {
-//  @include container;
-//}
 
 .display-desktop-only {
   @media ($mediaNoDesktop) {

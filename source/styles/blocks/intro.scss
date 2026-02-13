@@ -1,33 +1,47 @@
-
 .intro {
+  padding: 20px 15px;
+
+  @media ($mediaTablet) {
+    padding: 30px 30px;
+  }
+
   @media ($mediaDesktop) {
-  min-width: 1366px;
-  height: 552px;
-  padding-right: 298px;
-  padding-left: 300px;
-  padding-top: 24px;
-  padding-bottom: 130px;
+    max-width: $maxContainerWidth;
+    margin: 0 auto;
+    padding: 24px 100px 80px;
   }
 }
 
 .intro__container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 316px;
-  min-height: 268px;
+  max-width: 100%;
 
   @media ($mediaTablet) {
     max-width: 1320px;
-    margin: 0 auto;
- }
+  }
 }
 
+// По мобильному макету: картинки в ряд, прокручиваемые
 .intro__piclist {
   @include list-reset;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media ($mediaTablet) {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: center;
+    gap: 18px;
+  }
 
   @media ($mediaDesktop) {
     flex-wrap: nowrap;
@@ -35,59 +49,61 @@
 }
 
 .intro__item {
-  max-width: 328px;
-  width: 100%;
+  min-width: 120px;
+  max-width: 180px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
   @media ($mediaTablet) {
-    flex-direction: row;
-    text-align: left;
-    gap: 20px;
-    align-items: flex-start;
+    min-width: auto;
+    max-width: 328px;
+    width: 100%;
+    flex-shrink: 1;
   }
 
   @media ($mediaDesktop) {
-    max-width: 552px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    max-width: 100%;
   }
 }
 
+// По макету: О бюро — текст по левому краю на мобильном
 .intro__description {
-  max-width: 328px;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   @media ($mediaDesktop) {
-    max-width: 552px;
-    flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 41px 237px 31px 306px;
+    margin: 41px auto 31px;
   }
 }
 
 .intro__text {
   width: 100%;
-  height: 100%;
-  padding-top: 20px;
-}
+  padding-top: 15px;
+  text-align: left;
 
+  @media ($mediaDesktop) {
+    text-align: center;
+  }
+}
 
 .intro__title {
   font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
 
   @media ($mediaDesktop) {
     font-size: 40px;
-    max-width: 552px;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    margin: 34px 214px -8px -19px;
   }
 }

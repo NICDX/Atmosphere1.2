@@ -1,54 +1,210 @@
-
-
 .projects__text {
-  max-width: 1920px;
+  max-width: $maxContainerWidth;
   margin-left: auto;
   margin-right: auto;
+  padding: 15px;
+
+  @media ($mediaTablet) {
+    padding: 20px 30px;
+  }
 }
 
 .projects__title {
   font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
 
   @media ($mediaDesktop) {
-    font-size: 40px;
-    max-width: 552px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 34px;
-    display: flex;
-    justify-content: space-around;
+    font-size: 30px;
   }
 }
 
-
-.projects {
-  margin-bottom: 659px;
-
-  @media ($mediaDesktop) {
-    margin-left: 113px;
-  }
-
-}
-
-.projectprojectsswiper__image {
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.projectsswiper__container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 316px;
-  min-height: 268px;
+.projects__intro {
+  padding: 15px 15px 0;
 
   @media ($mediaTablet) {
-    max-width: 1321px;
-    min-height: 686px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 20px 30px 0;
   }
+}
+
+.projects {
+  padding: 0 15px;
+  margin-bottom: 30px;
+
+  @media ($mediaTablet) {
+    padding: 0 30px;
+  }
+
+  @media ($mediaDesktop) {
+    padding: 0 80px;
+    margin-bottom: 60px;
+  }
+}
+
+// Контейнер слайдера — на мобилке без стрелок (свайп), на десктопе со стрелками
+.projectsswiper__container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+
+  @media ($mediaTablet) {
+    max-width: 750px;
+    padding: 0 50px;
+  }
+
+  @media ($mediaDesktop) {
+    max-width: 900px;
+  }
+}
+
+.projectsswiper {
+  overflow: hidden;
+}
+
+// По макету Image 4: белая карточка
+.projectsswiper .swiper-slide {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px 15px;
+  box-sizing: border-box;
+
+  @media ($mediaTablet) {
+    border-radius: 16px;
+    padding: 30px;
+  }
+}
+
+.projectprojectsswiper__title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+  color: $colorBaseSecondary;
+
+  @media ($mediaTablet) {
+    font-size: 20px;
+  }
+}
+
+.projectprojectsswiper__smalldiscription {
+  font-size: 13px;
+  margin: 0 0 12px;
+  color: $colorBaseSecondary;
+
+  @media ($mediaTablet) {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+}
+
+// По мобильному макету Image 4: фото с лейблами "До" / "После"
+.projectprojectsswiper__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+
+  @media ($mediaTablet) {
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+}
+
+.projectprojectsswiper__content,
+.projectlipslider__content {
+  color: $colorBaseSecondary;
+}
+
+.projectprojectsswiper__text,
+.projectlipslider__text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: $colorBaseSecondary;
+  margin-bottom: 12px;
+
+  @media ($mediaTablet) {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+.projectprojectsswiper__description,
+.projectlipslider__description {
+  font-size: 13px;
+  line-height: 1.5;
+  color: $colorBaseSecondary;
+  margin: 3px 0;
+
+  @media ($mediaTablet) {
+    font-size: 14px;
+  }
+}
+
+// Лейблы "До"/"После"
+.projectsswiper__label {
+  position: absolute;
+  top: 10px;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  z-index: 2;
+  color: $colorFont;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  &--before {
+    left: 10px;
+  }
+
+  &--after {
+    right: 10px;
+  }
+
+  @media ($mediaTablet) {
+    padding: 4px 16px;
+    font-size: 12px;
+  }
+}
+
+// Стрелки — скрыты на мобилке, видны на планшете+
+.projectsswiper-button-prev,
+.projectsswiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 28px;
+  color: $colorBaseSecondary;
+  user-select: none;
+
+  &:hover {
+    color: #666;
+  }
+
+  @media ($mediaTablet) {
+    display: flex;
+  }
+}
+
+.projectsswiper-button-prev {
+  left: 0;
+}
+
+.projectsswiper-button-next {
+  right: 0;
 }

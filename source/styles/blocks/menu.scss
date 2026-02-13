@@ -8,21 +8,23 @@
   }
 }
 
+// По макету: бургер справа в хедере
 .menu__link-span {
-  padding: 22px;
+  padding: 18px 15px;
   display: flex;
   align-items: center;
-  background-image: url("./images/icons/burger.svg");
+  cursor: pointer;
 }
 
+// По макету: крестик закрытия — белый, справа
 .menu__cross {
   display: none;
-  margin: 22px;
-  background-image: url("./images/icons/cross.svg");
+  padding: 18px 15px;
+  cursor: pointer;
 }
 
 .menu__burger {
-  //background-image: url("./images/icons/icon-burger.svg");
+  display: block;
 
   @media ($mediaTablet) {
     display: none;

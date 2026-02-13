@@ -1,45 +1,47 @@
 .links__list {
   @include list-reset;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
+  flex-direction: column;
+  gap: 12px;
 
   @media ($mediaTablet) {
-    gap: 19px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
   }
 }
 
 .links__item {
-  max-width: 328px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 10px;
-  padding-top: 10px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
 
   @media ($mediaTablet) {
-    flex-direction: row;
-    text-align: left;
-    gap: 20px;
-    align-items: flex-start;
+    max-width: 328px;
   }
 
   @media ($mediaDesktop) {
     max-width: 552px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 }
 
-
 .links {
+  padding: 15px;
+
+  @media ($mediaTablet) {
+    padding: 20px 30px;
+  }
+
   @media ($mediaDesktop) {
-min-width: 1920px;
-height: 344px;
-left: 0;
-right: 0;
+    max-width: $maxContainerWidth;
+    margin: 0 auto;
   }
 }
