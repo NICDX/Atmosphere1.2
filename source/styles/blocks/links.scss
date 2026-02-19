@@ -1,14 +1,15 @@
+// === REDESIGN 2026 — Links: CTA cards with hover overlay ===
 .links__list {
   @include list-reset;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 
   @media ($mediaTablet) {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 18px;
+    gap: 24px;
   }
 }
 
@@ -17,31 +18,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform $transitionBase, box-shadow $transitionBase;
 
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    transition: transform $transitionSlow;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadowCardHover;
+
+    img {
+      transform: scale(1.05);
+    }
   }
 
   @media ($mediaTablet) {
-    max-width: 328px;
-  }
-
-  @media ($mediaDesktop) {
-    max-width: 552px;
+    max-width: 360px;
   }
 }
 
 .links {
-  padding: 15px;
+  padding: 40px 20px 60px;
 
   @media ($mediaTablet) {
-    padding: 20px 30px;
-  }
-
-  @media ($mediaDesktop) {
-    max-width: $maxContainerWidth;
-    margin: 0 auto;
+    padding: 60px 40px 80px;
   }
 }

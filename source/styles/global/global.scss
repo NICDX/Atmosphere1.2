@@ -1,3 +1,5 @@
+// === REDESIGN 2026 — Global Styles + Enhanced UX ===
+
 *,
 *::after,
 *::before {
@@ -6,15 +8,39 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  text-rendering: optimizeLegibility;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+
+  &.img-loaded {
+    opacity: 1;
+  }
 }
 
 picture {
   display: block;
+}
+
+a {
+  transition: color $transitionBase, opacity $transitionBase;
+}
+
+// Selection color
+::selection {
+  background: $colorAccent;
+  color: #fff;
 }
 
 .visually-hidden {
@@ -32,4 +58,124 @@ picture {
   @media ($mediaNoDesktop) {
     display: none;
   }
+}
+
+// === SCROLL PROGRESS BAR ===
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, $colorAccent, $colorAccentLight);
+  z-index: 9999;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+// === SCROLL REVEAL ANIMATIONS ===
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// === BACK TO TOP BUTTON ===
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: $colorBaseSecondary;
+  color: $colorFont;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all $transitionBase;
+  pointer-events: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background: $colorAccent;
+    border-color: $colorAccent;
+    transform: translateY(-4px);
+  }
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  @media ($mediaNoTablet) {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+// === PAGE TRANSITIONS ===
+.page__body {
+  animation: pageEnter 0.6s ease both;
+}
+
+.page-exit .page__body {
+  animation: pageExit 0.4s ease both;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+// === GRAIN OVERLAY for premium feel ===
+.page__body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+// === ENHANCED FOCUS STATES ===
+:focus-visible {
+  outline: 2px solid $colorAccent;
+  outline-offset: 3px;
+  border-radius: 4px;
 }

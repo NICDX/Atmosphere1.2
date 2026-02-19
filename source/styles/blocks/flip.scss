@@ -1,139 +1,156 @@
-// По мобильному макету Image 5: карточки в одну колонку
+// === REDESIGN 2026 — Flip/Services: Elevated cards ===
 .flip__list {
   @include list-reset;
   display: flex;
   flex-direction: column;
+  gap: 24px;
 
   @media ($mediaTablet) {
-    gap: 30px;
     display: grid;
-    grid-template-rows: auto;
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
+    gap: 32px;
     max-width: 1200px;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
   }
 }
 
 .flip__item {
-  border-bottom: 1px solid #141313;
-  padding: 15px;
+  border-bottom: none;
+  padding: 24px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: $shadowCard;
+  transition: transform $transitionBase, box-shadow $transitionBase;
 
-  @media ($mediaTablet) {
-    padding: 20px;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadowCardHover;
   }
 }
 
 .flip__title {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
 
   @media ($mediaTablet) {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
 .flip__picrureimg {
   max-width: 100%;
   height: auto;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  overflow: hidden;
 
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
+    transition: transform $transitionSlow;
+  }
+
+  &:hover img {
+    transform: scale(1.03);
   }
 }
 
 .flip__discription {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.7;
+  color: $colorTextMuted;
 
   @media ($mediaTablet) {
-    font-size: 18px;
-    margin-bottom: 30px;
-    margin-top: 16px;
+    font-size: 16px;
   }
 }
 
 .flip__titlesec {
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
 
   @media ($mediaTablet) {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
 .flip__listsec {
-  list-style-type: circle;
+  list-style-type: none;
+  padding-left: 0;
+
+  li::before {
+    content: '·';
+    color: $colorAccent;
+    font-weight: 700;
+    padding-right: 8px;
+  }
 }
 
 .flip__listsecitemdisc {
   font-size: 14px;
-
-  @media ($mediaTablet) {
-    font-size: 18px;
-  }
+  line-height: 1.7;
+  color: $colorTextMuted;
 }
 
 .flip__buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 15px 40px;
-  gap: 12px;
+  padding: 40px 20px 60px;
+  gap: 16px;
 
   @media ($mediaTablet) {
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
-    padding-bottom: 60px;
-    padding-top: 33px;
+    gap: 24px;
   }
 }
 
 .flip__button {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  background: $colorBasePrimary;
+  background: transparent;
   cursor: pointer;
   width: 100%;
   max-width: 280px;
-  height: 40px;
-  border: 1px solid $colorHover;
-  border-radius: 50px;
+  height: 48px;
+  border: 1.5px solid $colorTextDark;
+  border-radius: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all $transitionBase;
 
-  @media ($mediaTablet) {
-    width: 318px;
-    height: 56px;
-    font-size: 14px;
+  &:hover {
+    background: $colorBaseSecondary;
+    color: $colorFont;
+    border-color: $colorBaseSecondary;
   }
 }
 
 .services__text {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: $maxContainerWidth;
-  padding: 15px;
+  padding: 60px 20px 20px;
 
   @media ($mediaTablet) {
-    padding: 20px 30px;
+    padding: 80px 40px 30px;
   }
 }
 
 .services__title {
-  font-size: 20px;
-  margin-bottom: 15px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 
   @media ($mediaDesktop) {
-    font-size: 40px;
+    font-size: 44px;
     padding-left: 80px;
-    padding-bottom: 34px;
+    padding-bottom: 20px;
   }
 }

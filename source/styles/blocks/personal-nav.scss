@@ -2,6 +2,7 @@
   @include list-reset;
   display: flex;
   align-items: center;
+  gap: 4px;
 
   @media ($mediaDesktop) {
     gap: 10px;
@@ -23,10 +24,16 @@
   display: block;
   padding: 15px;
   height: 100%;
+  transition: opacity $transitionBase;
 
   svg {
     display: block;
-    color: inherit;
+    opacity: 0.7;
+    transition: opacity $transitionBase;
+  }
+
+  &:hover svg {
+    opacity: 1;
   }
 
   @media ($mediaTablet) {
@@ -38,13 +45,13 @@
   }
 }
 
-// По макету: номер телефона отображается в хедере рядом с иконками
 .personal-nav__phone {
   color: $colorFont;
   font-size: 14px;
   font-weight: 500;
   white-space: nowrap;
   display: none;
+  letter-spacing: 0.05em;
 
   @media ($mediaTablet) {
     display: block;

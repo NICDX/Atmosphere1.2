@@ -1,15 +1,22 @@
+// === REDESIGN 2026 — Luxury Minimalism ===
 
-// Colors
-$colorBasePrimary: #ccc6c2;
-$colorBaseSecondary: #141313;
+// Palette: Warm stone + charcoal + gold accent
+$colorBasePrimary: #f5f0eb;        // Тёплый камень (фон)
+$colorBaseSecondary: #1a1a1a;      // Глубокий чёрный
 $colorFont: #ffffff;
-$colorHover: #000000;
+$colorHover: #1a1a1a;
+$colorAccent: #c9a96e;             // Золотой акцент
+$colorAccentLight: #e8d5b0;
+$colorTextDark: #2a2a2a;
+$colorTextMuted: #7a7672;
+$colorDivider: rgba(26, 26, 26, 0.08);
+$colorDividerLight: rgba(255, 255, 255, 0.12);
 
 // Viewport
 $mediaTablet: "min-width: 768px";
 $mediaDesktop: "min-width: 1366px";
 $mediaNoTablet: "max-width: 767px";
-$mediaNoDesktop: "max-width: 1919px";
+$mediaNoDesktop: "max-width: 1365px";
 
 // Indents
 $containerIndent: 20px;
@@ -17,3 +24,16 @@ $containerIndentDesktop: 40px;
 
 // Container
 $maxContainerWidth: 1920px;
+
+// Typography
+$fontPrimary: "Montserrat", "Arial", sans-serif;
+$fontDisplay: "Montserrat", "Arial", sans-serif;
+
+// Transitions
+$transitionBase: 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+$transitionSlow: 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+// Shadows
+$shadowCard: 0 4px 32px rgba(0, 0, 0, 0.06);
+$shadowCardHover: 0 8px 48px rgba(0, 0, 0, 0.12);
+$shadowElevated: 0 20px 60px rgba(0, 0, 0, 0.1);

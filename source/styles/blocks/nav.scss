@@ -1,16 +1,12 @@
+// === REDESIGN 2026 — Nav: refined spacing, gold hover ===
 nav {
-  background-color: $colorBaseSecondary;
-
-  &--hidden {
-    display: none;
-  }
+  background-color: transparent;
 
   @media ($mediaTablet) {
     display: flex;
   }
 }
 
-// По мобильному макету: nav скрыт, показывается бургер-меню
 .nav__list {
   @include list-reset;
   display: none;
@@ -18,10 +14,7 @@ nav {
   @media ($mediaTablet) {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  @media ($mediaDesktop) {
-    gap: 20px;
+    gap: 8px;
   }
 }
 
@@ -29,17 +22,39 @@ nav {
   @include link-reset;
   display: block;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   line-height: 16px;
-  letter-spacing: 0.24px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  padding: 20px 10px;
-  color: $colorFont;
+  padding: 28px 14px;
+  color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
+  transition: color $transitionBase;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: $colorAccent;
+    transition: width $transitionBase;
+  }
+
+  &:hover {
+    color: $colorFont;
+
+    &::after {
+      width: 60%;
+    }
+  }
 
   @media ($mediaDesktop) {
-    font-size: 14px;
-    padding: 20px 15px;
+    font-size: 12px;
+    padding: 28px 18px;
   }
 }

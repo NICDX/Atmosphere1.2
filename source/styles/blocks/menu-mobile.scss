@@ -1,15 +1,15 @@
-// По макету Image 7: тёмный фон, пункты по центру, разделители, лого видно сверху
+// === REDESIGN 2026 — Mobile menu: Fullscreen elegance ===
 .menu-mobile {
   display: none;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
-  z-index: 10;
-  background-color: rgba(20, 19, 19, 0.95);
   width: 100%;
-  min-height: calc(100vh - 56px);
-  padding-top: 30px;
-  padding-bottom: 30px;
+  height: 100vh;
+  z-index: 99;
+  background: rgba(26, 26, 26, 0.97);
+  backdrop-filter: blur(20px);
+  padding-top: 100px;
 }
 
 .menu-mobile__list {
@@ -17,50 +17,46 @@
   margin: 0;
   list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 
-// По макету: крупный текст, центрирован, border-top на каждом пункте
 .menu-mobile__item {
-  padding: 20px 0;
-  width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 22px 0;
+  width: 80%;
+  border-bottom: 1px solid $colorDividerLight;
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
-  line-height: 20px;
+  letter-spacing: 0.15em;
+  transition: background $transitionBase;
 
-  &:last-child {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  &:first-child {
+    border-top: 1px solid $colorDividerLight;
   }
 
   &:active {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(201, 169, 110, 0.1);
   }
 }
 
-// По макету: "Заказать звонок" — с подчёркиванием, внизу меню
 .menu-mobile__item--cta {
   border: none;
-  padding-top: 30px;
+  padding-top: 36px;
 
   .menu-mobile__link {
     text-decoration: underline;
-    text-underline-offset: 4px;
+    text-underline-offset: 6px;
+    text-decoration-color: $colorAccent;
   }
 }
 
 @media ($mediaTablet) {
-  .menu-mobile {
-    display: none !important;
-  }
+  .menu-mobile { display: none !important; }
 }
 
 .menu-mobile__link {
   @include link-reset;
   color: $colorFont;
-  font-size: 16px;
 }

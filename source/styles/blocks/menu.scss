@@ -1,32 +1,26 @@
 .menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-
-  @media ($mediaTablet) {
-    display: none;
-  }
+  @media ($mediaTablet) { display: none; }
 }
 
-// По макету: бургер справа в хедере
 .menu__link-span {
-  padding: 18px 15px;
+  padding: 18px 20px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  opacity: 0.7;
+  transition: opacity $transitionBase;
+  &:hover { opacity: 1; }
 }
 
-// По макету: крестик закрытия — белый, справа
 .menu__cross {
   display: none;
-  padding: 18px 15px;
+  padding: 18px 20px;
   cursor: pointer;
 }
 
 .menu__burger {
   display: block;
-
-  @media ($mediaTablet) {
-    display: none;
-  }
+  @media ($mediaTablet) { display: none; }
 }

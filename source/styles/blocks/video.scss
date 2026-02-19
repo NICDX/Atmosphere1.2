@@ -1,45 +1,43 @@
+// === REDESIGN 2026 — Video: Cinematic ===
 .video {
-  padding: 15px;
+  padding: 40px 0;
+  background: $colorBaseSecondary;
 
   @media ($mediaTablet) {
-    padding: 20px 30px;
+    padding: 80px 40px;
   }
 }
 
 .video__container {
-  max-width: 100%;
+  max-width: 900px;
   margin: 0 auto;
 
   @media ($mediaDesktop) {
     max-width: 1110px;
     min-height: 671px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
-// По макету: видео большое — почти на всю ширину контента
-// На десктопе ~768x500, на мобилке на всю ширину
+// По мобильному макету: видео на всю ширину без отступов
 .video__item {
-  margin: 0 auto 32px;
+  margin: 0 auto 24px;
   display: block;
   width: 100%;
   height: auto;
+  min-height: 220px;
 
   @media ($mediaTablet) {
     width: 768px;
     height: 500px;
     max-width: 100%;
-  }
-
-  @media ($mediaDesktop) {
-    width: 768px;
-    height: 500px;
+    border-radius: 20px;
   }
 }
 
 .video__description {
-  margin: 10px 0;
+  margin: 16px 20px;
   text-align: center;
   font-size: 14px;
+  color: $colorTextMuted;
+  letter-spacing: 0.02em;
 }

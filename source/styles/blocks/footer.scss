@@ -1,3 +1,4 @@
+// === REDESIGN 2026 — Footer: Premium centered layout ===
 .footer {
   background-color: $colorBaseSecondary;
   width: 100%;
@@ -6,79 +7,51 @@
 .footer__logo {
   @include link-reset;
   display: block;
-
-  img {
-    @include image;
-  }
+  img { @include image; }
 }
 
 .footer__logo-text {
-  color: $colorFont;
+  color: rgba(255, 255, 255, 0.6);
   text-align: center;
-  margin-top: 8px;
+  margin-top: 10px;
   font-size: 14px;
-  padding: 0;
-
-  @media ($mediaTablet) {
-    font-size: 16px;
-  }
+  letter-spacing: 0.1em;
 }
 
-// По мобильному макету: всё по центру, вертикально
 .footer__container {
   color: $colorFont;
-  padding: 40px 15px 30px;
+  padding: 60px 20px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  @media ($mediaTablet) {
-    padding: 60px 20px 40px;
-    max-width: $maxContainerWidth;
-    margin: 0 auto;
-  }
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.footer__inner {
-  display: none;
-
-  @media ($mediaDesktop) {
-    display: block;
-  }
-}
+.footer__inner { display: none; @media ($mediaDesktop) { display: block; } }
 
 .footer__innner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 25px;
+  gap: 10px;
+  margin-bottom: 40px;
 }
 
 .footer__copyright-text {
   display: flex;
-  color: white;
+  color: rgba(255, 255, 255, 0.4);
   font-size: 11px;
   margin: 0;
-  width: 100%;
   gap: 3px;
   justify-content: center;
-  line-height: 16px;
-
-  @media ($mediaTablet) {
-    font-size: 12px;
-  }
 }
 
 .footer__fiealdset {
-  margin-bottom: 25px;
+  margin-bottom: 40px;
   width: 100%;
-  max-width: 300px;
-
-  @media ($mediaTablet) {
-    max-width: 400px;
-  }
+  max-width: 320px;
 }
 
 .footer__social {
@@ -86,45 +59,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 25px;
+  gap: 16px;
+  margin-bottom: 36px;
 }
 
 .footer__social-link {
   @include link-reset;
   display: flex;
   align-items: center;
+  opacity: 0.6;
+  transition: opacity $transitionBase;
+  &:hover { opacity: 1; }
 }
 
 .footer__social-telephone {
   color: white;
-  font-size: 16px;
-  font-weight: 600;
-
-  @media ($mediaTablet) {
-    font-size: 18px;
-  }
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
-// По мобильному макету: навигация в футере — вертикально
-.footer__nav {
-  @include list-reset;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 25px;
-  font-size: 13px;
-
-  @media ($mediaTablet) {
-    gap: 20px;
-    font-size: 14px;
-  }
-}
-
-// По мобильному макету: контакты вертикально, с иконками
 .footer__information {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 100%;
 }
 
@@ -132,47 +88,40 @@
   @include list-reset;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
 
   @media ($mediaTablet) {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 48px;
   }
 }
 
-.footer__information-item {
-  display: flex;
-  align-items: center;
-}
+.footer__information-item { display: flex; align-items: center; }
 
 .footer__information-link {
   @include link-reset;
-  color: white;
+  color: rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   flex-direction: column;
+  transition: color $transitionBase;
+  &:hover { color: $colorFont; }
 
-  @media ($mediaTablet) {
-    flex-direction: row;
-  }
+  @media ($mediaTablet) { flex-direction: row; }
 }
 
 .footer__information-text {
   margin: 0;
   font-size: 13px;
-
-  @media ($mediaTablet) {
-    font-size: 14px;
-  }
+  letter-spacing: 0.02em;
 }
 
 .footer__rightsinformation {
-  padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 24px;
+  border-top: 1px solid $colorDividerLight;
   width: 100%;
 }
 
@@ -185,23 +134,15 @@
 
   @media ($mediaTablet) {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 32px;
   }
 }
 
 .footer__rightsinformation-link {
   @include link-reset;
-  color: white;
+  color: rgba(255, 255, 255, 0.35);
   font-size: 11px;
-  opacity: 0.7;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  @media ($mediaTablet) {
-    font-size: 12px;
-  }
+  transition: color $transitionBase;
+  &:hover { color: rgba(255, 255, 255, 0.7); }
 }

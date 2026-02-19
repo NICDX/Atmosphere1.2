@@ -1,38 +1,32 @@
+// === REDESIGN 2026 — Buro: Fixed image sizes, mobile layout ===
 .buro__container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: auto;
-  padding: 15px;
-
-  @media ($mediaTablet) {
-    padding: 20px;
-  }
+  padding: 20px;
 }
 
-// По макету mobile Image 1,2: форма — тёмный блок, вертикальный, центрированный
 .buro__reg {
-  padding: 20px 15px;
+  padding: 60px 20px;
 
   @media ($mediaDesktop) {
-    padding-bottom: 100px;
-    padding-top: 10px;
+    padding: 100px 80px;
   }
 
   .buro__container {
     background-color: $colorBaseSecondary;
-    border-radius: 12px;
-    padding: 30px 20px;
+    border-radius: 24px;
+    padding: 40px 24px;
     max-width: 100%;
     margin: 0 auto;
     flex-direction: column;
     align-items: center;
+    box-shadow: $shadowElevated;
 
     @media ($mediaTablet) {
       max-width: 900px;
-      padding: 40px 30px;
-      flex-direction: row;
-      justify-content: center;
+      padding: 60px 50px;
     }
   }
 }
@@ -41,119 +35,200 @@
   color: $colorFont;
   text-align: center;
   width: 100%;
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 18px;
   font-weight: 400;
+  margin-bottom: 28px;
+  letter-spacing: 0.02em;
 }
 
-// По макету: кнопка — полная ширина на мобилке
 .buro__form-button {
-  font-size: 15px;
-  line-height: 28px;
-  text-transform: none;
-  background: $colorBaseSecondary;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: transparent;
   color: $colorFont;
   cursor: pointer;
   width: 100%;
   max-width: 280px;
-  height: 44px;
-  margin: 0 auto;
-  border: 1px solid $colorFont;
-  border-radius: 50px;
+  height: 48px;
+  margin: 8px auto 0;
+  border: 1.5px solid $colorFont;
+  border-radius: 60px;
   display: block;
-  transition: background 0.3s;
+  transition: all $transitionBase;
 
   &:hover {
-    background: lighten($colorBaseSecondary, 10%);
-  }
-
-  @media ($mediaTablet) {
-    width: 218px;
-    height: 48px;
+    background: $colorFont;
+    color: $colorBaseSecondary;
   }
 }
 
-// По макету: инпуты на мобилке на полную ширину
 .buro__form-input {
-  border: 1px solid $colorFont;
-  border-radius: 50px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 60px;
   background: transparent;
   color: $colorFont;
   font-size: 15px;
-  line-height: 28px;
   width: 100%;
   max-width: 280px;
-  height: 44px;
-  padding: 0 20px;
+  height: 48px;
+  padding: 0 24px;
   text-align: center;
   display: block;
-  margin: 0 auto 12px;
+  margin: 0 auto 14px;
+  transition: border-color $transitionBase;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.45);
     text-align: center;
   }
 
-  @media ($mediaTablet) {
-    width: 218px;
-    height: 48px;
-    margin: 0;
+  &:focus {
+    outline: none;
+    border-color: $colorAccent;
   }
 }
 
 .buro {
   margin: 0 auto;
   max-width: $maxContainerWidth;
+  padding: 60px 20px;
+
+  @media ($mediaTablet) {
+    padding: 80px 40px;
+  }
 }
 
 .buro__list {
   @include list-reset;
   display: flex;
   flex-direction: column;
-  list-style-type: none;
-  margin: 0;
+  gap: 60px;
 
   @media ($mediaDesktop) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 10px;
+    gap: 60px;
+    align-items: start;
   }
 }
 
+// Первый item (buro__item-im): текст слева, картинка справа на десктопе
+// На мобилке: текст сверху, картинка снизу
 .buro__item {
-  padding: 15px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 
-  @media ($mediaTablet) {
-    padding: 20px;
+  // Первый item: текст + картинка рядом на десктопе
+  &.buro__item-im {
+    @media ($mediaTablet) {
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .buro__intro {
+      flex: 1;
+    }
+
+    // Картинка справа на десктопе
+    > .buro__picture {
+      order: 2;
+
+      @media ($mediaNoTablet) {
+        order: 2; // На мобилке картинка под текстом
+      }
+    }
   }
 }
 
+// Второй item: картинка внутри .buro__intro (перед заголовком)
+// На десктопе: картинка слева, текст справа
+// На мобилке: картинка сверху, текст снизу
 .buro__intro {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+
+  @media ($mediaTablet) {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+
+    // Картинка-reverse внутри intro — слева
+    .buro__picture-reverse {
+      order: -1;
+      flex-shrink: 0;
+    }
+  }
+
+  // На мобилке — картинка сверху (уже по умолчанию в column)
 }
 
 .buro__title {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 600;
+  color: $colorTextDark;
+  letter-spacing: -0.02em;
+  position: relative;
+  padding-left: 16px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 3px;
+    background: $colorAccent;
+    border-radius: 3px;
+  }
 
   @media ($mediaDesktop) {
-    font-size: 30px;
+    font-size: 32px;
   }
 }
 
 .buro__discription {
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.7;
+  color: $colorTextMuted;
 }
 
+// FIX: картинки одинакового размера на десктопе
 .buro__picture {
   max-width: 100%;
   height: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  // Одинаковый размер для всех картинок
+  width: 200px;
+  height: 200px;
 
   img {
-    max-width: 100%;
-    height: auto;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transition: transform $transitionSlow;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  @media ($mediaNoTablet) {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+
+    img {
+      width: 160px;
+      height: 160px;
+    }
   }
 }

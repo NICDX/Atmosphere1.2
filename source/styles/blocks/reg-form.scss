@@ -1,85 +1,70 @@
-.reg-form {
-  width: 100%;
-}
+// === REDESIGN 2026 — Forms: Clean, centered, gold focus ===
+.reg-form { width: 100%; }
+.reg-form__container { width: 100%; }
 
-.reg-form__container {
-  width: 100%;
-}
-
-// Центрирование заголовка формы
 .reg-form__title {
   font-weight: 400;
   font-size: 16px;
   color: $colorFont;
-  padding-left: 0;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: center;
   width: 100%;
-
-  @media ($mediaTablet) {
-    font-size: 18px;
-  }
+  letter-spacing: 0.02em;
 }
 
-// FIX: центрирование контейнеров инпутов
 .reg-form__label-container {
-  padding-left: 0;
-  margin-bottom: 10px;
+  padding: 0;
+  margin-bottom: 12px;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
-// Кнопка — центрирована
 .reg-form__button {
   cursor: pointer;
-  border: 1px solid $colorFont;
-  border-radius: 50px;
-  background: $colorHover;
+  border: 1.5px solid $colorFont;
+  border-radius: 60px;
+  background: transparent;
   color: $colorFont;
-  font-size: 15px;
-  line-height: 28px;
-  width: 218px;
-  height: 40px;
-  transition: background 0.3s;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 240px;
+  height: 48px;
   display: block;
-  margin: 0 auto;
+  margin: 4px auto 0;
+  transition: all $transitionBase;
 
   &:hover {
-    background: #333;
-  }
-
-  @media ($mediaTablet) {
-    width: 280px;
-    height: 48px;
+    background: $colorFont;
+    color: $colorBaseSecondary;
   }
 }
 
-// Инпуты — центрированы
 .reg-form__input {
-  border: 1px solid $colorFont;
-  border-radius: 50px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 60px;
   background: transparent;
   color: $colorFont;
   font-size: 15px;
-  line-height: 28px;
-  width: 218px;
-  height: 40px;
-  padding: 0 20px;
+  width: 240px;
+  height: 48px;
+  padding: 0 24px;
   text-align: center;
+  transition: border-color $transitionBase;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.4);
     text-align: center;
   }
 
-  @media ($mediaTablet) {
-    width: 280px;
-    height: 48px;
+  &:focus {
+    outline: none;
+    border-color: $colorAccent;
   }
 }
 
-// Fieldset — убираем дефолтные отступы, центрируем
 .reg-form__registration {
   border: 0 none;
   padding: 0;
@@ -91,15 +76,15 @@
 
 .reg-form__represent {
   font-size: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: center;
   width: 100%;
 }
 
 .form-message {
-  padding: 10px 15px;
-  border-radius: 8px;
-  margin-top: 12px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-top: 16px;
   font-size: 13px;
   display: none;
   text-align: center;
@@ -108,13 +93,13 @@
 }
 
 .form-message--success {
-  background-color: rgba(0, 128, 0, 0.2);
-  color: #4caf50;
-  border: 1px solid #4caf50;
+  background: rgba(201, 169, 110, 0.15);
+  color: $colorAccent;
+  border: 1px solid rgba(201, 169, 110, 0.4);
 }
 
 .form-message--error {
-  background-color: rgba(255, 0, 0, 0.2);
+  background: rgba(255, 82, 82, 0.12);
   color: #ff5252;
-  border: 1px solid #ff5252;
+  border: 1px solid rgba(255, 82, 82, 0.3);
 }

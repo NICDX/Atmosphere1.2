@@ -1,19 +1,21 @@
+// === REDESIGN 2026 — Team: Clean cards ===
 .team__title {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
 
   @media ($mediaDesktop) {
-    font-size: 40px;
+    font-size: 44px;
     padding-left: 20px;
   }
 }
 
 .team {
-  padding: 15px;
+  padding: 60px 20px;
 
   @media ($mediaTablet) {
-    padding: 20px 30px;
+    padding: 80px 40px;
   }
 }
 

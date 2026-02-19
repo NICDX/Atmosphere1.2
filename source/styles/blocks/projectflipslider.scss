@@ -1,24 +1,33 @@
+// === REDESIGN 2026 — Team/Project flip slider cards ===
 .projectflipslider {
-  padding: 15px;
+  padding: 40px 20px;
 
   @media ($mediaTablet) {
-    padding: 20px 30px;
+    padding: 60px 40px;
   }
 }
 
 .projectlipslider__image {
-  border-radius: 6px;
+  border-radius: 16px;
   max-width: 100%;
   height: auto;
+  transition: transform $transitionSlow, filter $transitionBase;
+  filter: grayscale(20%);
+
+  &:hover {
+    transform: scale(1.03);
+    filter: grayscale(0%);
+  }
 }
 
 .projectlipslider__title {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
 
   @media ($mediaDesktop) {
-    font-size: 40px;
+    font-size: 44px;
     padding-left: 20px;
   }
 }
@@ -26,32 +35,26 @@
 .projectlipslider__container {
   margin: 0 auto;
   max-width: 100%;
-
-  @media ($mediaTablet) {
-    max-width: 1321px;
-  }
+  @media ($mediaTablet) { max-width: 1321px; }
 }
 
 .projectlipslider__content {
-  padding: 5px;
+  padding: 8px;
+  text-align: center;
 }
 
 .projectlipslider__text {
-  font-size: 13px;
-  margin-top: 8px;
+  font-size: 14px;
+  margin-top: 12px;
   margin-bottom: 4px;
-
-  @media ($mediaTablet) {
-    font-size: 14px;
-  }
+  font-weight: 600;
+  color: $colorTextDark;
+  letter-spacing: 0.01em;
 }
 
 .projectlipslider__description {
   font-size: 12px;
-  color: #555;
+  color: $colorTextMuted;
   margin: 0;
-
-  @media ($mediaTablet) {
-    font-size: 13px;
-  }
+  letter-spacing: 0.02em;
 }
